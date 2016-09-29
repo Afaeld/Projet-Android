@@ -1,10 +1,18 @@
 [
     {
-        "merged": "F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\build\\intermediates\\res\\merged\\debug\\drawable\\image.jpg",
-        "source": "F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\res\\drawable\\image.jpg"
+        "merged": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/build/intermediates/res/merged/debug/drawable/image.jpg",
+        "source": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/res/drawable/image.jpg"
     },
     {
-        "merged": "F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\build\\intermediates\\res\\merged\\debug\\drawable\\ctc_small.jpg",
-        "source": "F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\res\\drawable\\ctc_small.jpg"
+        "merged": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\build\\intermediates\\res\\merged\\debug\\drawable\\image.jpg",
+        "source": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\res\\drawable\\image.jpg"
+    },
+    {
+        "merged": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\build\\intermediates\\res\\merged\\debug\\drawable\\ctc_small.jpg",
+        "source": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\res\\drawable\\ctc_small.jpg"
+    },
+    {
+        "merged": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/build/intermediates/res/merged/debug/drawable/ctc_small.jpg",
+        "source": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/res/drawable/ctc_small.jpg"
     }
 ]

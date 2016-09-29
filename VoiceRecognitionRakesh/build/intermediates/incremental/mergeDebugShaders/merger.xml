@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\Sauvegarde MSI\Cours_ITII\Projet Alcatel\VoiceRecognitionRakesh\VoiceRecognitionRakesh\src\main\shaders"/></dataSet><dataSet config="debug"><source path="F:\Sauvegarde MSI\Cours_ITII\Projet Alcatel\VoiceRecognitionRakesh\VoiceRecognitionRakesh\build-types\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/build-types/debug/shaders"/></dataSet></merger>

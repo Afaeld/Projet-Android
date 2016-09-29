@@ -1,6 +1,10 @@
 [
     {
-        "merged": "F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\build\\intermediates\\res\\merged\\debug\\layout-v14\\settings.xml",
-        "source": "F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\res\\layout-v14\\settings.xml"
+        "merged": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\build\\intermediates\\res\\merged\\debug\\layout-v14\\settings.xml",
+        "source": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/F:\\Sauvegarde MSI\\Cours_ITII\\Projet Alcatel\\VoiceRecognitionRakesh\\VoiceRecognitionRakesh\\res\\layout-v14\\settings.xml"
+    },
+    {
+        "merged": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/build/intermediates/res/merged/debug/layout-v14/settings.xml",
+        "source": "/Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/res/layout-v14/settings.xml"
     }
 ]
