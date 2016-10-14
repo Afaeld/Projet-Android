@@ -2,12 +2,14 @@ package com.rakesh.voicerecognition;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
@@ -24,103 +26,131 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.cengalabs.flatui.FlatUI;
 import com.rakesh.voicerecognition.R;
 
-public class VoiceRecognitionActivity extends Activity {
+public class
 
-	private static final int VOICE_RECOGNITION_REQUEST_CODE = 1001;
+VoiceRecognitionActivity extends Activity {
 
-	//private EditText metTextHint;
-	//private ListView mlvTextMatches;
-	private Spinner msTextMatches;
-	private Button mbtSpeak;
-	private PhoneStateListener listener=new PhoneStateListener();
-	private ListView mlvTextMatches;
-	private EditText metTextHint;
+    private static final int VOICE_RECOGNITION_REQUEST_CODE = 1001;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_voice_recognition);
-		metTextHint = (EditText) findViewById(R.id.etTextHint);
-		mlvTextMatches = (ListView) findViewById(R.id.lvTextMatches);
-		msTextMatches = (Spinner) findViewById(R.id.sNoOfMatches);
-		mbtSpeak = (Button) findViewById(R.id.btSpeak);
-	}
+    //private EditText metTextHint;
+    //private ListView mlvTextMatches;
+    private Spinner msTextMatches;
+    private Button mbtSpeak;
+    private Button mbtReglage;
+    private PhoneStateListener listener = new PhoneStateListener();
+    private ListView mlvTextMatches;
+    private EditText metTextHint;
+    private XmlPullParserHandler xpph;
+    private List pkgAppsList;
+    private List<ApplicationInfo> installedApps;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_voice_recognition);
+        metTextHint = (EditText) findViewById(R.id.etTextHint);
+        mlvTextMatches = (ListView) findViewById(R.id.lvTextMatches);
+        msTextMatches = (Spinner) findViewById(R.id.sNoOfMatches);
+        mbtSpeak = (Button) findViewById(R.id.btSpeak);
+        mbtReglage = (Button) findViewById(R.id.btnReglage);
+
+        xpph = new XmlPullParserHandler();
+        xpph.parse(this.getResources().openRawResource(R.raw.dico));
+
+        PackageManager pm = getPackageManager();
+        List<ApplicationInfo> apps = pm.getInstalledApplications(0);
+        installedApps = new ArrayList<ApplicationInfo>();
+
+        for (ApplicationInfo app : apps) {
+            if ((app.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0) {
+                installedApps.add(app);
+            } else if ((app.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
+            } else {
+                installedApps.add(app);
+            }
+
+            Log.d("info", (String) pm.getApplicationLabel(app));
+        }
+        pkgAppsList = installedApps;
+
+        mbtReglage.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), settings.class);
+                startActivity(nextScreen);
+            }
+        });
 
 
-	public void checkVoiceRecognition()
-	{
-		// Check if voice recognition is present
-		PackageManager pm = getPackageManager();
-		List<ResolveInfo> activities = pm.queryIntentActivities(new Intent(
-				RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
-		if (activities.size() == 0) {
-			mbtSpeak.setEnabled(false);
-			Toast.makeText(this, "Voice recognizer not present",
-					Toast.LENGTH_SHORT).show();
-		}
-	}
-
-	public void speak(View view) {
-		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-		//Identifie le package appelant pour spécifier l'application
-		intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getClass()
-				.getPackage().getName());
+    }
 
 
-		// Donner une direction à la reconnaissance vocale pour que ce soit plus rapide
-		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-				RecognizerIntent.LANGUAGE_MODEL_WEB_SEARCH);
+    public void speak(View view) {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        //Identifie le package appelant pour spécifier l'application
+        //intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getClass()
+       //         .getPackage().getName());
 
 
+        intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
+        startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE)  //Vérification de l'activitée appelée
 
-		intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5);
+            //If Voice recognition is successful then it returns RESULT_OK
+            if (resultCode == RESULT_OK) {
+                ArrayList<String> textMatchList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                boolean found = false;
+                Command comFound ;
+                if (!pkgAppsList.isEmpty())
+                    Log.d("info", Locale.getDefault().getDisplayLanguage().toString());
+                for (int i = 0; i < textMatchList.toArray().length; i++) {
+                    if(found)
+                        break;
+                    for (Command command : xpph.cmds) {
+                        if(found)
+                            break;
+                        if (textMatchList.toArray()[i].toString().toLowerCase().compareTo(command.getFunction().toString().toLowerCase())==0) {
+                            showToastMessage(command.getFunction().toString());
+                            comFound=command;
+                            break;
+                        }
+                    }
+                }
 
-		startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
-	}
+                if (textMatchList.get(0).contains("search")) {
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == VOICE_RECOGNITION_REQUEST_CODE)  //Vérification de l'activitée appelée
+                    String searchQuery = textMatchList.get(0).replace("search",
+                            " ");
+                    Intent search = new Intent(Intent.ACTION_WEB_SEARCH);
+                    search.putExtra(SearchManager.QUERY, searchQuery);
+                    startActivity(search);    //Lancement de l'activité de recherche sur internet du terme
+                }
+//                Log.i("info",ResultCode.formInt(resultCode).toSring());
+                //Affichage des différentes erreurs
+            } else if (resultCode == RecognizerIntent.RESULT_AUDIO_ERROR) {
+                showToastMessage("Audio Error");
+            } else if (resultCode == RecognizerIntent.RESULT_CLIENT_ERROR) {
+                showToastMessage("Client Error");
+            } else if (resultCode == RecognizerIntent.RESULT_NETWORK_ERROR) {
+                showToastMessage("Network Error");
+            } else if (resultCode == RecognizerIntent.RESULT_NO_MATCH) {
+                showToastMessage("No Match");
+            } else if (resultCode == RecognizerIntent.RESULT_SERVER_ERROR) {
+                showToastMessage("Server Error");
+            }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
-			//If Voice recognition is successful then it returns RESULT_OK
-			if(resultCode == RESULT_OK) {
-
-				ArrayList<String> textMatchList = data
-				.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
-				if (!textMatchList.isEmpty()) {
-					// Si le premier mot contient "Search"
-					// Lance une recherche internet
-					if (textMatchList.get(0).contains("search")) {
-
-						String searchQuery = textMatchList.get(0).replace("search",
-						" ");
-						Intent search = new Intent(Intent.ACTION_WEB_SEARCH);
-						search.putExtra(SearchManager.QUERY, searchQuery);
-						startActivity(search);	//Lancement de l'activité de recherche sur internet du terme
-					}
-
-				}
-			//Affichage des différentes erreurs
-			}else if(resultCode == RecognizerIntent.RESULT_AUDIO_ERROR){
-				showToastMessage("Audio Error");
-			}else if(resultCode == RecognizerIntent.RESULT_CLIENT_ERROR){
-				showToastMessage("Client Error");
-			}else if(resultCode == RecognizerIntent.RESULT_NETWORK_ERROR){
-				showToastMessage("Network Error");
-			}else if(resultCode == RecognizerIntent.RESULT_NO_MATCH){
-				showToastMessage("No Match");
-			}else if(resultCode == RecognizerIntent.RESULT_SERVER_ERROR){
-				showToastMessage("Server Error");
-			}
-		super.onActivityResult(requestCode, resultCode, data);
-	}
-
-	void showToastMessage(String message){
-		Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-	}
+    void showToastMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
 
 }

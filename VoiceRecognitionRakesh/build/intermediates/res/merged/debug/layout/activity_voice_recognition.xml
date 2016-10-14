@@ -1,18 +1,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:weightSum="1">
 
-    <EditText
-        android:id="@+id/etTextHint"
-        android:gravity="top"
-        android:inputType="textMultiLine"
-        android:lines="1"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/etSearchHint"/>
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etTextHint"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="1"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:text="@string/etSearchHint"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Réglage"
+            android:layout_width="wrap_content"
+            android:id="@+id/btnReglage"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <ImageView
         android:layout_width="336dp"

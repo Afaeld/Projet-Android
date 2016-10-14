@@ -1,55 +1,85 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:1:1-31:12
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:1:1-41:12
 	package
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:2:5-42
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:2:5-42
 	android:versionName
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:4:5-30
-		INJECTED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml
-		INJECTED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:4:5-30
+		INJECTED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml
+		INJECTED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml
 	android:versionCode
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:3:5-28
-		INJECTED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml
-		INJECTED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml
+		INJECTED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:1:11-69
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:6:5-71
-	android:name
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:6:22-68
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:7:5-75
-	android:name
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:7:22-72
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:1:11-69
 uses-sdk
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:8:5-10:41
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.eluleci:flatui:3.0.0] C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\exploded-aar\com.github.eluleci\flatui\3.0.0\AndroidManifest.xml:5:5-7:41
 	android:targetSdkVersion
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:10:9-38
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:8:9-38
 	android:minSdkVersion
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:9:9-34
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:7:9-34
 uses-permission#android.permission.INTERNET
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:12:2-64
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:12:19-61
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:10:22-64
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:11:5-75
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:11:22-72
 uses-permission#android.permission.PROCESS_OUTGOING_CALLS
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:14:5-80
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:14:22-78
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:13:5-71
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:13:22-68
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:14:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:15:22-78
 application
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:16:5-27:19
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:17:5-38:19
+MERGED from [com.github.eluleci:flatui:3.0.0] C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\exploded-aar\com.github.eluleci\flatui\3.0.0\AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:18:9-41
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:19:9-41
 	android:icon
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:17:9-45
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:18:9-45
 	android:theme
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:19:9-40
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:20:9-40
+activity#com.rakesh.voicerecognition.VoiceRecognitionActivity
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:21:9-28:20
+	android:label
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:23:13-69
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:22:13-53
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:24:13-27:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:26:27-74
+activity#com.rakesh.voicerecognition.settings
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:30:9-55
+	android:name
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:30:19-43
 receiver#com.rakesh.voicerecognition.CallReceiver
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:21:9-25:20
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:32:9-36:20
 	android:name
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:21:19-46
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:32:19-46
 intent-filter#android.intent.action.PHONE_STATE
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:22:13-24:29
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:33:13-35:29
 action#android.intent.action.PHONE_STATE
-ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:23:17-76
+ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:34:17-76
 	android:name
-		ADDED from /Users/Pierre-Marie/Projet-Android/VoiceRecognitionRakesh/AndroidManifest.xml:23:25-73
+		ADDED from C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\AndroidManifest.xml:34:25-73
