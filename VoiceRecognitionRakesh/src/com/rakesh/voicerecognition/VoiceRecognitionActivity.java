@@ -43,7 +43,6 @@ VoiceRecognitionActivity extends Activity {
     private PhoneStateListener listener = new PhoneStateListener();
     private ListView mlvTextMatches;
     private EditText metTextHint;
-    private XmlPullParserHandler xpph;
     private List pkgAppsList;
     private List<ApplicationInfo> installedApps;
 
@@ -58,8 +57,6 @@ VoiceRecognitionActivity extends Activity {
         mbtSpeak = (Button) findViewById(R.id.btSpeak);
         mbtReglage = (Button) findViewById(R.id.btnReglage);
 
-        xpph = new XmlPullParserHandler();
-        xpph.parse(this.getResources().openRawResource(R.raw.dico));
 
         PackageManager pm = getPackageManager();
         List<ApplicationInfo> apps = pm.getInstalledApplications(0);
@@ -69,7 +66,8 @@ VoiceRecognitionActivity extends Activity {
             if ((app.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0) {
                 installedApps.add(app);
             } else if ((app.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
-            } else {
+            }
+            else {
                 installedApps.add(app);
             }
 
@@ -107,22 +105,26 @@ VoiceRecognitionActivity extends Activity {
             //If Voice recognition is successful then it returns RESULT_OK
             if (resultCode == RESULT_OK) {
                 ArrayList<String> textMatchList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
                 boolean found = false;
                 Command comFound ;
                 if (!pkgAppsList.isEmpty())
                     Log.d("info", Locale.getDefault().getDisplayLanguage().toString());
+
                 for (int i = 0; i < textMatchList.toArray().length; i++) {
+                    String[] commande = textMatchList.toArray()[i].toString().split(" ");
                     if(found)
                         break;
-                    for (Command command : xpph.cmds) {
+    /*                for (Command command : xpph.cmds) {
                         if(found)
                             break;
                         if (textMatchList.toArray()[i].toString().toLowerCase().compareTo(command.getFunction().toString().toLowerCase())==0) {
                             showToastMessage(command.getFunction().toString());
                             comFound=command;
+
                             break;
                         }
-                    }
+                    }*/
                 }
 
                 if (textMatchList.get(0).contains("search")) {
@@ -149,7 +151,7 @@ VoiceRecognitionActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    void showToastMessage(String message) {
+    public void showToastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
