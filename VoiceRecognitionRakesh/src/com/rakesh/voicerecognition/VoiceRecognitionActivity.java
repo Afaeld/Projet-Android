@@ -1,5 +1,12 @@
 package com.rakesh.voicerecognition;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -45,6 +52,10 @@ VoiceRecognitionActivity extends Activity {
     private EditText metTextHint;
     private List pkgAppsList;
     private List<ApplicationInfo> installedApps;
+    private XmlPullParserHandler xpph;
+    static final int READ_BLOCK_SIZE = 100;
+
+    private String XmlFileName = "dico.xml";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,7 +68,8 @@ VoiceRecognitionActivity extends Activity {
         mbtSpeak = (Button) findViewById(R.id.btSpeak);
         mbtReglage = (Button) findViewById(R.id.btnReglage);
 
-
+        xpph = new XmlPullParserHandler(this.getApplicationContext(), XmlFileName);
+        initXML();
         PackageManager pm = getPackageManager();
         List<ApplicationInfo> apps = pm.getInstalledApplications(0);
         installedApps = new ArrayList<ApplicationInfo>();
@@ -66,8 +78,7 @@ VoiceRecognitionActivity extends Activity {
             if ((app.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0) {
                 installedApps.add(app);
             } else if ((app.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
-            }
-            else {
+            } else {
                 installedApps.add(app);
             }
 
@@ -79,6 +90,7 @@ VoiceRecognitionActivity extends Activity {
 
             public void onClick(View arg0) {
                 Intent nextScreen = new Intent(getApplicationContext(), settings.class);
+
                 startActivity(nextScreen);
             }
         });
@@ -91,7 +103,7 @@ VoiceRecognitionActivity extends Activity {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         //Identifie le package appelant pour spécifier l'application
         //intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getClass()
-       //         .getPackage().getName());
+        //         .getPackage().getName());
 
 
         intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
@@ -107,26 +119,32 @@ VoiceRecognitionActivity extends Activity {
                 ArrayList<String> textMatchList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
                 boolean found = false;
-                Command comFound ;
+                Command comFound;
                 if (!pkgAppsList.isEmpty())
                     Log.d("info", Locale.getDefault().getDisplayLanguage().toString());
 
                 for (int i = 0; i < textMatchList.toArray().length; i++) {
                     String[] commande = textMatchList.toArray()[i].toString().split(" ");
-                    if(found)
+                    if (found)
                         break;
-    /*                for (Command command : xpph.cmds) {
-                        if(found)
+                    for (Command command : xpph.cmds) {
+                        if (found)
                             break;
-                        if (textMatchList.toArray()[i].toString().toLowerCase().compareTo(command.getFunction().toString().toLowerCase())==0) {
-                            showToastMessage(command.getFunction().toString());
-                            comFound=command;
-
-                            break;
+                        for(String leword: command.getFR())
+                        {
+                            if (textMatchList.toArray()[i].toString().toLowerCase().compareTo(leword.toLowerCase()) == 0) {
+                                showToastMessage(command.getFunction().toString());
+                                comFound = command;
+                                found = true;
+                                break;
+                            }
                         }
-                    }*/
+
+                    }
                 }
 
+                //GROS SWITCh CASE AVEC CHAQUE COMMANDE
+/*
                 if (textMatchList.get(0).contains("search")) {
 
                     String searchQuery = textMatchList.get(0).replace("search",
@@ -134,7 +152,7 @@ VoiceRecognitionActivity extends Activity {
                     Intent search = new Intent(Intent.ACTION_WEB_SEARCH);
                     search.putExtra(SearchManager.QUERY, searchQuery);
                     startActivity(search);    //Lancement de l'activité de recherche sur internet du terme
-                }
+                }*/
 //                Log.i("info",ResultCode.formInt(resultCode).toSring());
                 //Affichage des différentes erreurs
             } else if (resultCode == RecognizerIntent.RESULT_AUDIO_ERROR) {
@@ -155,4 +173,87 @@ VoiceRecognitionActivity extends Activity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    public void initXML() {
+        Log.v("XML", "Starting getXML ...");
+        Boolean isAnXML = false;
+        Boolean fileExist = false;
+        FileInputStream fileIn = null;
+        StringBuilder fileString = new StringBuilder();
+        //We check if the file on the storage was created
+        File file = this.getBaseContext().getFileStreamPath(XmlFileName);
+        if (file == null || !file.exists()) {
+            Log.v("getFile", "false");
+        } else {
+            fileExist = true;
+            Log.v("getFile", "true");
+        }
+        if (fileExist) {
+            Log.v("XML", "Starting fileExist ...");
+            try {
+                fileIn = openFileInput(XmlFileName);
+                fileString = new StringBuilder();
+                int ch;
+                try {
+                    while ((ch = fileIn.read()) != -1) {
+                        fileString.append((char) ch);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Log.v("XML file :", fileString.toString());
+                isAnXML = fileString.toString().startsWith("<Dictionnaire>");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        //If there is no file or it's not an XML, we get the Dictionnary from the ressources and create the file rigght away
+        if (!isAnXML || !fileExist) {
+            Log.v("XML", "Starting !isAnXML || !fileExist ...");
+            xpph.parse(this.getResources().openRawResource(R.raw.dico));
+            String XML = xpph.XmlToString();
+            try {
+                FileOutputStream fileout = openFileOutput(XmlFileName, MODE_PRIVATE);
+                OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+                outputWriter.write(XML);
+                outputWriter.close();
+
+                //display file saved message
+                Toast.makeText(getBaseContext(), "File saved successfully!",
+                        Toast.LENGTH_SHORT).show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            Log.v("XML", "Parsing Xml ...");
+            try {
+                fileIn = openFileInput(XmlFileName);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            xpph.parse(fileIn);
+        }
+    }
+
+    public void displayFileContent() {
+        try {
+            FileInputStream fileIn = openFileInput(XmlFileName);
+            InputStreamReader InputRead = new InputStreamReader(fileIn);
+
+            char[] inputBuffer = new char[READ_BLOCK_SIZE];
+            String s = "";
+            int charRead;
+
+            while ((charRead = InputRead.read(inputBuffer)) > 0) {
+                // char to string conversion
+                String readstring = String.copyValueOf(inputBuffer, 0, charRead);
+                s += readstring;
+            }
+            InputRead.close();
+            Log.v("XML", s);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

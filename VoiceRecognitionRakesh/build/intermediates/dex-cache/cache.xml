@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\exploded-aar\com.github.eluleci\flatui\3.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d1089efa4a24767294278997764bea2fda31ccca">
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\com.github.eluleci-flatui-3.0.0_a239482287ebcb5eceac82ae2b024d362eae3022.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d6d09516a8f3e4f80b50ff2a3b879f401a0781f0">
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\instant-run_ec2e63b724825adbabd74966430a2b3bb1866cbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5edb1a21e87086ec7617e740eeddc252d7d4cebd">
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4a90d584331d0f429b3f27df4ad6d49e696a0c2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\libs\android-support-v4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="27c24d26e4c5d57976e6926367985548678e913c">
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\android-support-v4_d2a09dc06b0c715f2649558be1ede03b14075204.jar" />
+    </item>
+
+</items>

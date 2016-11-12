@@ -8,8 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +26,7 @@ public class settings  extends Activity {
 
 
     private Spinner allCommands;
+    private ListView listWord;
     private XmlPullParserHandler xpph;
 
     /**
@@ -49,7 +52,7 @@ public class settings  extends Activity {
         String email = i.getStringExtra("email");
         Log.e("Second Screen", name + "." + email);
         allCommands = (Spinner) findViewById(R.id.commandSpinner);
-        xpph = new XmlPullParserHandler();
+        //xpph = new XmlPullParserHandler(this.getApplicationContext(),"C:\\Users\\Vikes\\Documents\\GitHub\\Projet-Android\\VoiceRecognitionRakesh\\dico.xml");
         xpph.parse(this.getResources().openRawResource(R.raw.dico));
         List<String> spinnerArray =  new ArrayList<String>();
 
@@ -66,18 +69,63 @@ public class settings  extends Activity {
         buttonOne.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 String selected = allCommands.getSelectedItem().toString();
+                int i=0;
                 boolean test = false;
                 for (Command commande: xpph.cmds) {
+
                     for(String str:commande.getFR())
                     {
-                        if(str.toLowerCase().equals(selected.toLowerCase()))
-                            showToastMessage("La commande "+commande.getFR()+" va être supprimée");
+                        if(str.toLowerCase().equals(selected.toLowerCase())) {
+                            xpph.removeCmd(i);
+                            test=true;
+                            break;
+                        }
                     }
+                    if(test)
+                        break;
+                    i++;
 
                 }
 
             }
         });
+        listWord= (ListView) findViewById(R.id.listeWord);
+        allCommands.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+          @Override
+          public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+
+              String selected = allCommands.getSelectedItem().toString();
+              ArrayAdapter<String> arrayAdapter;
+              String[] wordsFr= {};
+
+              boolean test = false;
+              for (Command commande: xpph.cmds) {
+                  for(String str:commande.getFR())
+                  {
+                      //if(str.toLowerCase().equals(selected.toLowerCase()))
+                  }
+              }
+             // arrayAdapter = new ArrayAdapter<String>(,android.R.layout.simple_list_item_1, wordsFr);
+
+              //listWord.setAdapter(arrayAdapter);
+
+
+          }
+
+          @Override
+          public void onNothingSelected(AdapterView<?> parentView) {
+              // your code here
+          }
+
+      });
+
+        String[] widgetModes = {"Mode 1", "Mode2"};
+        ArrayAdapter<String> widgetModeAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_spinner_item, widgetModes);
+        widgetModeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ListView words = (ListView) findViewById(R.id.listeWord);
+
+
 
     }
 
