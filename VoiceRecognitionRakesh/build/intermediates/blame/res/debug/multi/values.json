@@ -1,5 +1,1598 @@
 [
     {
+        "outputFile": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 7,
+                    "endColumn": 20,
+                    "endOffset": 266
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 173,
+                        "endLine": 11,
+                        "endColumn": 20,
+                        "endOffset": 384
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 271,
+                    "endLine": 13,
+                    "endColumn": 20,
+                    "endOffset": 492
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 389,
+                        "endLine": 17,
+                        "endColumn": 20,
+                        "endOffset": 610
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 497,
+                    "endLine": 19,
+                    "endColumn": 20,
+                    "endOffset": 708
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 615,
+                        "endLine": 23,
+                        "endColumn": 20,
+                        "endOffset": 826
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 713,
+                    "endLine": 25,
+                    "endColumn": 20,
+                    "endOffset": 919
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 831,
+                        "endLine": 29,
+                        "endColumn": 20,
+                        "endOffset": 1037
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 924,
+                    "endLine": 31,
+                    "endColumn": 20,
+                    "endOffset": 1130
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1042,
+                        "endLine": 35,
+                        "endColumn": 20,
+                        "endOffset": 1248
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1135,
+                    "endLine": 37,
+                    "endColumn": 20,
+                    "endOffset": 1346
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1253,
+                        "endLine": 41,
+                        "endColumn": 20,
+                        "endOffset": 1464
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1351,
+                    "endLine": 43,
+                    "endColumn": 20,
+                    "endOffset": 1562
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 1469,
+                        "endLine": 47,
+                        "endColumn": 20,
+                        "endOffset": 1680
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 1567,
+                    "endLine": 49,
+                    "endColumn": 20,
+                    "endOffset": 1783
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 1685,
+                        "endLine": 53,
+                        "endColumn": 20,
+                        "endOffset": 1901
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 1788,
+                    "endLine": 61,
+                    "endColumn": 19,
+                    "endOffset": 2074
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 427,
+                        "endLine": 20,
+                        "endColumn": 19,
+                        "endOffset": 724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 2079,
+                    "endLine": 67,
+                    "endColumn": 20,
+                    "endOffset": 2285
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 1906,
+                        "endLine": 59,
+                        "endColumn": 20,
+                        "endOffset": 2112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 2290,
+                    "endLine": 73,
+                    "endColumn": 20,
+                    "endOffset": 2491
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 2117,
+                        "endLine": 65,
+                        "endColumn": 20,
+                        "endOffset": 2318
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 2496,
+                    "endLine": 79,
+                    "endColumn": 20,
+                    "endOffset": 2697
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 2323,
+                        "endLine": 71,
+                        "endColumn": 20,
+                        "endOffset": 2524
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 2702,
+                    "endLine": 85,
+                    "endColumn": 20,
+                    "endOffset": 2908
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 72,
+                        "startColumn": 4,
+                        "startOffset": 2529,
+                        "endLine": 77,
+                        "endColumn": 20,
+                        "endOffset": 2735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 86,
+                    "startColumn": 4,
+                    "startOffset": 2913,
+                    "endColumn": 52,
+                    "endOffset": 2961
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 81,
+                        "startColumn": 4,
+                        "startOffset": 2856,
+                        "endColumn": 53,
+                        "endOffset": 2905
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 87,
+                    "startColumn": 4,
+                    "startOffset": 2966,
+                    "endColumn": 53,
+                    "endOffset": 3015
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 82,
+                        "startColumn": 4,
+                        "startOffset": 2910,
+                        "endColumn": 54,
+                        "endOffset": 2960
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 3020,
+                    "endColumn": 50,
+                    "endOffset": 3066
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 4,
+                        "startOffset": 2965,
+                        "endColumn": 51,
+                        "endOffset": 3012
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 89,
+                    "startColumn": 4,
+                    "startOffset": 3071,
+                    "endColumn": 51,
+                    "endOffset": 3118
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 84,
+                        "startColumn": 4,
+                        "startOffset": 3017,
+                        "endColumn": 52,
+                        "endOffset": 3065
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 3123,
+                    "endColumn": 48,
+                    "endOffset": 3167
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 3070,
+                        "endColumn": 49,
+                        "endOffset": 3115
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 3172,
+                    "endColumn": 48,
+                    "endOffset": 3216
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 86,
+                        "startColumn": 4,
+                        "startOffset": 3120,
+                        "endColumn": 49,
+                        "endOffset": 3165
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 3221,
+                    "endColumn": 45,
+                    "endOffset": 3262
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 3170,
+                        "endColumn": 46,
+                        "endOffset": 3212
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 93,
+                    "startColumn": 4,
+                    "startOffset": 3267,
+                    "endLine": 97,
+                    "endColumn": 11,
+                    "endOffset": 3451
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 88,
+                        "startColumn": 4,
+                        "startOffset": 3217,
+                        "endLine": 92,
+                        "endColumn": 11,
+                        "endOffset": 3404
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 3456,
+                    "endColumn": 46,
+                    "endOffset": 3498
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 93,
+                        "startColumn": 4,
+                        "startOffset": 3409,
+                        "endColumn": 47,
+                        "endOffset": 3452
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 3503,
+                    "endLine": 103,
+                    "endColumn": 11,
+                    "endOffset": 3685
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 94,
+                        "startColumn": 4,
+                        "startOffset": 3457,
+                        "endLine": 98,
+                        "endColumn": 11,
+                        "endOffset": 3642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 3690,
+                    "endColumn": 44,
+                    "endOffset": 3730
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 3764,
+                        "endColumn": 44,
+                        "endOffset": 3804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 3735,
+                    "endColumn": 46,
+                    "endOffset": 3777
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 103,
+                        "startColumn": 4,
+                        "startOffset": 3809,
+                        "endColumn": 46,
+                        "endOffset": 3851
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 3782,
+                    "endColumn": 45,
+                    "endOffset": 3823
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 104,
+                        "startColumn": 4,
+                        "startOffset": 3856,
+                        "endColumn": 45,
+                        "endOffset": 3897
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 3828,
+                    "endColumn": 47,
+                    "endOffset": 3871
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 105,
+                        "startColumn": 4,
+                        "startOffset": 3902,
+                        "endColumn": 47,
+                        "endOffset": 3945
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 3876,
+                    "endColumn": 46,
+                    "endOffset": 3918
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 106,
+                        "startColumn": 4,
+                        "startOffset": 3950,
+                        "endColumn": 46,
+                        "endOffset": 3992
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 109,
+                    "startColumn": 4,
+                    "startOffset": 3923,
+                    "endColumn": 48,
+                    "endOffset": 3967
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 107,
+                        "startColumn": 4,
+                        "startOffset": 3997,
+                        "endColumn": 48,
+                        "endOffset": 4041
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 3972,
+                    "endColumn": 47,
+                    "endOffset": 4015
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 108,
+                        "startColumn": 4,
+                        "startOffset": 4046,
+                        "endColumn": 47,
+                        "endOffset": 4089
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 4020,
+                    "endColumn": 49,
+                    "endOffset": 4065
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 109,
+                        "startColumn": 4,
+                        "startOffset": 4094,
+                        "endColumn": 49,
+                        "endOffset": 4139
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 4070,
+                    "endColumn": 44,
+                    "endOffset": 4110
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 110,
+                        "startColumn": 4,
+                        "startOffset": 4144,
+                        "endColumn": 44,
+                        "endOffset": 4184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 4115,
+                    "endColumn": 46,
+                    "endOffset": 4157
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 4189,
+                        "endColumn": 46,
+                        "endOffset": 4231
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 114,
+                    "startColumn": 4,
+                    "startOffset": 4162,
+                    "endColumn": 45,
+                    "endOffset": 4203
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 112,
+                        "startColumn": 4,
+                        "startOffset": 4236,
+                        "endColumn": 45,
+                        "endOffset": 4277
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 4208,
+                    "endColumn": 47,
+                    "endOffset": 4251
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 113,
+                        "startColumn": 4,
+                        "startOffset": 4282,
+                        "endColumn": 47,
+                        "endOffset": 4325
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 4256,
+                    "endColumn": 43,
+                    "endOffset": 4295
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 114,
+                        "startColumn": 4,
+                        "startOffset": 4330,
+                        "endColumn": 43,
+                        "endOffset": 4369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 4300,
+                    "endColumn": 45,
+                    "endOffset": 4341
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 4374,
+                        "endColumn": 45,
+                        "endOffset": 4415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 4346,
+                    "endColumn": 44,
+                    "endOffset": 4386
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 116,
+                        "startColumn": 4,
+                        "startOffset": 4420,
+                        "endColumn": 44,
+                        "endOffset": 4460
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 4391,
+                    "endColumn": 46,
+                    "endOffset": 4433
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 117,
+                        "startColumn": 4,
+                        "startOffset": 4465,
+                        "endColumn": 46,
+                        "endOffset": 4507
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 4438,
+                    "endColumn": 43,
+                    "endOffset": 4477
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 118,
+                        "startColumn": 4,
+                        "startOffset": 4512,
+                        "endColumn": 43,
+                        "endOffset": 4551
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 4482,
+                    "endColumn": 45,
+                    "endOffset": 4523
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 4556,
+                        "endColumn": 45,
+                        "endOffset": 4597
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 4528,
+                    "endColumn": 44,
+                    "endOffset": 4568
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 4602,
+                        "endColumn": 44,
+                        "endOffset": 4642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 4573,
+                    "endColumn": 46,
+                    "endOffset": 4615
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 121,
+                        "startColumn": 4,
+                        "startOffset": 4647,
+                        "endColumn": 46,
+                        "endOffset": 4689
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 4620,
+                    "endColumn": 44,
+                    "endOffset": 4660
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 122,
+                        "startColumn": 4,
+                        "startOffset": 4694,
+                        "endColumn": 44,
+                        "endOffset": 4734
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 4665,
+                    "endColumn": 46,
+                    "endOffset": 4707
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 123,
+                        "startColumn": 4,
+                        "startOffset": 4739,
+                        "endColumn": 46,
+                        "endOffset": 4781
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 4712,
+                    "endColumn": 45,
+                    "endOffset": 4753
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 124,
+                        "startColumn": 4,
+                        "startOffset": 4786,
+                        "endColumn": 45,
+                        "endOffset": 4827
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 4758,
+                    "endColumn": 47,
+                    "endOffset": 4801
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 4832,
+                        "endColumn": 47,
+                        "endOffset": 4875
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 4806,
+                    "endColumn": 44,
+                    "endOffset": 4846
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 126,
+                        "startColumn": 4,
+                        "startOffset": 4880,
+                        "endColumn": 44,
+                        "endOffset": 4920
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 4851,
+                    "endColumn": 46,
+                    "endOffset": 4893
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 127,
+                        "startColumn": 4,
+                        "startOffset": 4925,
+                        "endColumn": 46,
+                        "endOffset": 4967
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 4898,
+                    "endColumn": 45,
+                    "endOffset": 4939
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 128,
+                        "startColumn": 4,
+                        "startOffset": 4972,
+                        "endColumn": 45,
+                        "endOffset": 5013
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 4944,
+                    "endColumn": 47,
+                    "endOffset": 4987
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 129,
+                        "startColumn": 4,
+                        "startOffset": 5018,
+                        "endColumn": 47,
+                        "endOffset": 5061
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 4992,
+                    "endColumn": 45,
+                    "endOffset": 5033
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 130,
+                        "startColumn": 4,
+                        "startOffset": 5066,
+                        "endColumn": 45,
+                        "endOffset": 5107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 5038,
+                    "endColumn": 47,
+                    "endOffset": 5081
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 131,
+                        "startColumn": 4,
+                        "startOffset": 5112,
+                        "endColumn": 47,
+                        "endOffset": 5155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 5086,
+                    "endColumn": 46,
+                    "endOffset": 5128
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 132,
+                        "startColumn": 4,
+                        "startOffset": 5160,
+                        "endColumn": 46,
+                        "endOffset": 5202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 5133,
+                    "endColumn": 48,
+                    "endOffset": 5177
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 133,
+                        "startColumn": 4,
+                        "startOffset": 5207,
+                        "endColumn": 48,
+                        "endOffset": 5251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 5182,
+                    "endColumn": 43,
+                    "endOffset": 5221
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 134,
+                        "startColumn": 4,
+                        "startOffset": 5256,
+                        "endColumn": 43,
+                        "endOffset": 5295
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 5226,
+                    "endColumn": 45,
+                    "endOffset": 5267
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 135,
+                        "startColumn": 4,
+                        "startOffset": 5300,
+                        "endColumn": 45,
+                        "endOffset": 5341
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 138,
+                    "startColumn": 4,
+                    "startOffset": 5272,
+                    "endColumn": 44,
+                    "endOffset": 5312
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 136,
+                        "startColumn": 4,
+                        "startOffset": 5346,
+                        "endColumn": 44,
+                        "endOffset": 5386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 139,
+                    "startColumn": 4,
+                    "startOffset": 5317,
+                    "endColumn": 46,
+                    "endOffset": 5359
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 137,
+                        "startColumn": 4,
+                        "startOffset": 5391,
+                        "endColumn": 46,
+                        "endOffset": 5433
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 5364,
+                    "endColumn": 42,
+                    "endOffset": 5402
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 138,
+                        "startColumn": 4,
+                        "startOffset": 5438,
+                        "endColumn": 42,
+                        "endOffset": 5476
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 5407,
+                    "endColumn": 44,
+                    "endOffset": 5447
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 139,
+                        "startColumn": 4,
+                        "startOffset": 5481,
+                        "endColumn": 44,
+                        "endOffset": 5521
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 142,
+                    "startColumn": 4,
+                    "startOffset": 5452,
+                    "endColumn": 43,
+                    "endOffset": 5491
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 140,
+                        "startColumn": 4,
+                        "startOffset": 5526,
+                        "endColumn": 43,
+                        "endOffset": 5565
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 143,
+                    "startColumn": 4,
+                    "startOffset": 5496,
+                    "endColumn": 45,
+                    "endOffset": 5537
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 141,
+                        "startColumn": 4,
+                        "startOffset": 5570,
+                        "endColumn": 45,
+                        "endOffset": 5611
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 5542,
+                    "endColumn": 42,
+                    "endOffset": 5580
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 142,
+                        "startColumn": 4,
+                        "startOffset": 5616,
+                        "endColumn": 42,
+                        "endOffset": 5654
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 145,
+                    "startColumn": 4,
+                    "startOffset": 5585,
+                    "endColumn": 44,
+                    "endOffset": 5625
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 143,
+                        "startColumn": 4,
+                        "startOffset": 5659,
+                        "endColumn": 44,
+                        "endOffset": 5699
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 146,
+                    "startColumn": 4,
+                    "startOffset": 5630,
+                    "endColumn": 43,
+                    "endOffset": 5669
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 144,
+                        "startColumn": 4,
+                        "startOffset": 5704,
+                        "endColumn": 43,
+                        "endOffset": 5743
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 147,
+                    "startColumn": 4,
+                    "startOffset": 5674,
+                    "endColumn": 45,
+                    "endOffset": 5715
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 145,
+                        "startColumn": 4,
+                        "startOffset": 5748,
+                        "endColumn": 45,
+                        "endOffset": 5789
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 148,
+                    "startColumn": 4,
+                    "startOffset": 5720,
+                    "endColumn": 43,
+                    "endOffset": 5759
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 146,
+                        "startColumn": 4,
+                        "startOffset": 5794,
+                        "endColumn": 43,
+                        "endOffset": 5833
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 149,
+                    "startColumn": 4,
+                    "startOffset": 5764,
+                    "endColumn": 45,
+                    "endOffset": 5805
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 147,
+                        "startColumn": 4,
+                        "startOffset": 5838,
+                        "endColumn": 45,
+                        "endOffset": 5879
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 150,
+                    "startColumn": 4,
+                    "startOffset": 5810,
+                    "endColumn": 44,
+                    "endOffset": 5850
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 148,
+                        "startColumn": 4,
+                        "startOffset": 5884,
+                        "endColumn": 44,
+                        "endOffset": 5924
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 151,
+                    "startColumn": 4,
+                    "startOffset": 5855,
+                    "endColumn": 46,
+                    "endOffset": 5897
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\build\\intermediates\\exploded-aar\\com.github.eluleci\\flatui\\3.0.0\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 149,
+                        "startColumn": 4,
+                        "startOffset": 5929,
+                        "endColumn": 46,
+                        "endOffset": 5971
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 178,
+                    "startColumn": 4,
+                    "startOffset": 8744,
+                    "endColumn": 44,
+                    "endOffset": 8784
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 110,
+                        "endColumn": 44,
+                        "endOffset": 150
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 179,
+                    "startColumn": 4,
+                    "startOffset": 8789,
+                    "endColumn": 44,
+                    "endOffset": 8829
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 64,
+                        "endColumn": 44,
+                        "endOffset": 104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 180,
+                    "startColumn": 4,
+                    "startOffset": 8834,
+                    "endColumn": 43,
+                    "endOffset": 8873
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 19,
+                        "endColumn": 43,
+                        "endOffset": 58
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 181,
+                    "startColumn": 4,
+                    "startOffset": 8878,
+                    "endColumn": 60,
+                    "endOffset": 8934
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 19,
+                        "endColumn": 60,
+                        "endOffset": 75
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 8939,
+                    "endColumn": 41,
+                    "endOffset": 8976
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 81,
+                        "endColumn": 41,
+                        "endOffset": 118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 183,
+                    "startColumn": 4,
+                    "startOffset": 8981,
+                    "endColumn": 57,
+                    "endOffset": 9034
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 368,
+                        "endColumn": 57,
+                        "endOffset": 421
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 184,
+                    "startColumn": 4,
+                    "startOffset": 9039,
+                    "endColumn": 50,
+                    "endOffset": 9085
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 124,
+                        "endColumn": 50,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 185,
+                    "startColumn": 4,
+                    "startOffset": 9090,
+                    "endColumn": 54,
+                    "endOffset": 9140
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 312,
+                        "endColumn": 54,
+                        "endOffset": 362
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 186,
+                    "startColumn": 4,
+                    "startOffset": 9145,
+                    "endColumn": 78,
+                    "endOffset": 9219
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 176,
+                        "endColumn": 78,
+                        "endOffset": 250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 187,
+                    "startColumn": 4,
+                    "startOffset": 9224,
+                    "endColumn": 54,
+                    "endOffset": 9274
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 256,
+                        "endColumn": 54,
+                        "endOffset": 306
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 188,
+                    "startColumn": 4,
+                    "startOffset": 9279,
+                    "endColumn": 57,
+                    "endOffset": 9332
+                },
+                "from": {
+                    "file": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\VoiceRecognitionRakesh\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 19,
+                        "endColumn": 58,
+                        "endOffset": 73
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "C:\\Users\\Vikes\\Documents\\GitHub\\Projet-Android\\VoiceRecognitionRakesh\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
