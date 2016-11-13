@@ -7,9 +7,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import android.app.Activity;
 import android.app.SearchManager;
@@ -54,8 +56,10 @@ VoiceRecognitionActivity extends Activity {
     private List<ApplicationInfo> installedApps;
     private XmlPullParserHandler xpph;
     static final int READ_BLOCK_SIZE = 100;
+    static boolean newDico = false;
+    static final String XmlFileName = "dico.xml";
+    static final String Language =  Locale.getDefault().getDisplayLanguage();
 
-    private String XmlFileName = "dico.xml";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,6 @@ VoiceRecognitionActivity extends Activity {
         msTextMatches = (Spinner) findViewById(R.id.sNoOfMatches);
         mbtSpeak = (Button) findViewById(R.id.btSpeak);
         mbtReglage = (Button) findViewById(R.id.btnReglage);
-
         xpph = new XmlPullParserHandler(this.getApplicationContext(), XmlFileName);
         initXML();
         PackageManager pm = getPackageManager();
@@ -90,7 +93,6 @@ VoiceRecognitionActivity extends Activity {
 
             public void onClick(View arg0) {
                 Intent nextScreen = new Intent(getApplicationContext(), settings.class);
-
                 startActivity(nextScreen);
             }
         });
@@ -183,25 +185,48 @@ VoiceRecognitionActivity extends Activity {
         File file = this.getBaseContext().getFileStreamPath(XmlFileName);
         if (file == null || !file.exists()) {
             Log.v("getFile", "false");
-        } else {
+        }
+        else {
             fileExist = true;
             Log.v("getFile", "true");
         }
         if (fileExist) {
             Log.v("XML", "Starting fileExist ...");
             try {
-                fileIn = openFileInput(XmlFileName);
-                fileString = new StringBuilder();
-                int ch;
-                try {
-                    while ((ch = fileIn.read()) != -1) {
-                        fileString.append((char) ch);
+
+                if(newDico)
+                {
+                    Log.v("XML", "Starting !isAnXML || !fileExist ...");
+                    xpph.parse(this.getResources().openRawResource(R.raw.dico));
+                    String XML = xpph.XmlToString();
+                    try {
+                        FileOutputStream fileout;
+                        fileout = openFileOutput(XmlFileName, MODE_PRIVATE);
+                        PrintWriter writer = new PrintWriter(fileout);
+                        writer.print("");
+                        writer.close();
+                        fileout= openFileOutput(XmlFileName, MODE_PRIVATE);
+                        OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+                        outputWriter.write(XML);
+                        outputWriter.close();
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
+
                 }
-                Log.v("XML file :", fileString.toString());
-                isAnXML = fileString.toString().startsWith("<Dictionnaire>");
+                    fileIn = openFileInput(XmlFileName);
+                    fileString = new StringBuilder();
+                    int ch;
+                    try {
+                        while ((ch = fileIn.read()) != -1) {
+                            fileString.append((char) ch);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Log.v("XML file :", fileString.toString());
+                    isAnXML = fileString.toString().startsWith("<Dictionnaire>");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -212,7 +237,8 @@ VoiceRecognitionActivity extends Activity {
             xpph.parse(this.getResources().openRawResource(R.raw.dico));
             String XML = xpph.XmlToString();
             try {
-                FileOutputStream fileout = openFileOutput(XmlFileName, MODE_PRIVATE);
+                FileOutputStream fileout;
+                fileout = openFileOutput(XmlFileName, MODE_PRIVATE);
                 OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
                 outputWriter.write(XML);
                 outputWriter.close();

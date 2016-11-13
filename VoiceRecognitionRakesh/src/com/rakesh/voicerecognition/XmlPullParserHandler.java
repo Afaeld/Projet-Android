@@ -19,6 +19,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 
@@ -94,7 +95,7 @@ public class XmlPullParserHandler {
                 eventType = parser.next();
             }
             for(int i =0;i< cmds.size(); i++){
-                //cmds.get(i).display();
+                cmds.get(i).display();
             }
         } catch (XmlPullParserException e) {e.printStackTrace();}
         catch (IOException e) {e.printStackTrace();}
@@ -135,6 +136,10 @@ public class XmlPullParserHandler {
         try {
             Log.v("XPPHSaved","Saved");
             FileOutputStream fileout;
+            fileout= this.context.openFileOutput(XmlFileName, context.MODE_PRIVATE);
+            PrintWriter writer = new PrintWriter(fileout);
+            writer.print("");
+            writer.close();
             fileout= this.context.openFileOutput(XmlFileName, context.MODE_PRIVATE);
             OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
             outputWriter.write(this.XmlToString());

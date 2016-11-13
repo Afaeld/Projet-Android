@@ -1,8 +1,8 @@
 <Dictionnaire>
     <Commands>
         <Command>
-            <Function>Ouverture</Function>
             <Category>Start</Category>
+            <Function>Ouverture</Function>
             <Words>
                 <Fr>lancer</Fr>
                 <En>launch</En>

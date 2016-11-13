@@ -294,14 +294,13 @@ containing a value of this type.
         public static final int image=0x7f020003;
     }
     public static final class id {
-        public static final int backGrid=0x7f0b0013;
         public static final int box=0x7f0b0005;
         public static final int btSpeak=0x7f0b0010;
+        public static final int btnNouveau=0x7f0b0017;
         public static final int btnReglage=0x7f0b000e;
+        public static final int btnSauvegarder=0x7f0b0016;
         public static final int btnSupprimer=0x7f0b0018;
-        public static final int button=0x7f0b0017;
-        public static final int button2=0x7f0b0019;
-        public static final int commandSpinner=0x7f0b0014;
+        public static final int commandSpinner=0x7f0b0013;
         public static final int etTextHint=0x7f0b000d;
         public static final int fl_box=0x7f0b0008;
         public static final int fl_dark=0x7f0b0000;
@@ -315,17 +314,16 @@ containing a value of this type.
         public static final int fl_transparent=0x7f0b000a;
         public static final int flat=0x7f0b0006;
         public static final int imageView=0x7f0b000f;
-        public static final int listeWord=0x7f0b0015;
+        public static final int listeWord=0x7f0b0014;
         public static final int lvTextMatches=0x7f0b0012;
-        public static final int menu_settings=0x7f0b001a;
+        public static final int menu_settings=0x7f0b0019;
         public static final int sNoOfMatches=0x7f0b0011;
-        public static final int spinner=0x7f0b0016;
         public static final int transparent=0x7f0b0007;
+        public static final int wordsEdit=0x7f0b0015;
     }
     public static final class layout {
         public static final int activity_voice_recognition=0x7f030000;
-        public static final int settings=0x7f030001;
-        public static final int settings1=0x7f030002;
+        public static final int settings1=0x7f030001;
     }
     public static final class menu {
         public static final int activity_voice_recognition=0x7f0a0000;

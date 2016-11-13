@@ -12,21 +12,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d6d09516a8f3e4f80b50ff2a3b879f401a0781f0">
-        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\instant-run_ec2e63b724825adbabd74966430a2b3bb1866cbb.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="5edb1a21e87086ec7617e740eeddc252d7d4cebd">
+        sha1="dc493b93f2545a265be92b2804b5f86348a157a5">
         <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4a90d584331d0f429b3f27df4ad6d49e696a0c2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="be90d9731646ba860ddfa6b92f784db1bb68921f">
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\VoiceRecognitionRakesh\build\intermediates\pre-dexed\debug\instant-run_ec2e63b724825adbabd74966430a2b3bb1866cbb.jar" />
     </item>
     <item
         is-multidex="false"
