@@ -13,15 +13,20 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.app.SearchManager;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.speech.RecognizerIntent;
 import android.telephony.PhoneStateListener;
+import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +43,7 @@ import com.rakesh.voicerecognition.R;
 
 public class
 
-VoiceRecognitionActivity extends Activity {
+        VoiceRecognitionActivity extends Activity {
 
     private static final int VOICE_RECOGNITION_REQUEST_CODE = 1001;
 
@@ -53,6 +58,7 @@ VoiceRecognitionActivity extends Activity {
     private List pkgAppsList;
     private List<ApplicationInfo> installedApps;
     private XmlPullParserHandler xpph;
+    private PackageManager pm;
     static final int READ_BLOCK_SIZE = 100;
 
     private String XmlFileName = "dico.xml";
@@ -70,7 +76,8 @@ VoiceRecognitionActivity extends Activity {
 
         xpph = new XmlPullParserHandler(this.getApplicationContext(), XmlFileName);
         initXML();
-        PackageManager pm = getPackageManager();
+
+        pm = getPackageManager();
         List<ApplicationInfo> apps = pm.getInstalledApplications(0);
         installedApps = new ArrayList<ApplicationInfo>();
 
@@ -83,9 +90,12 @@ VoiceRecognitionActivity extends Activity {
             }
 
             Log.d("info", (String) pm.getApplicationLabel(app));
+            Log.d("info", (String) app.packageName);
         }
         pkgAppsList = installedApps;
-
+        for (int i =0; i< installedApps.size();i++){
+            Log.d("info", (String) pm.getApplicationLabel(installedApps.get(i)));
+        }
         mbtReglage.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View arg0) {
@@ -119,12 +129,15 @@ VoiceRecognitionActivity extends Activity {
                 ArrayList<String> textMatchList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
                 boolean found = false;
-                Command comFound;
+                Command comFound = null;//the command found
+                String[] commande = null;//the list of subcommand
+                String allwordsoncommand ="";
+                String matchingword =null;//The word who match with the commande
                 if (!pkgAppsList.isEmpty())
                     Log.d("info", Locale.getDefault().getDisplayLanguage().toString());
 
                 for (int i = 0; i < textMatchList.toArray().length; i++) {
-                    String[] commande = textMatchList.toArray()[i].toString().split(" ");
+                    commande = textMatchList.toArray()[i].toString().split(" ");
                     if (found)
                         break;
                     for (Command command : xpph.cmds) {
@@ -132,8 +145,22 @@ VoiceRecognitionActivity extends Activity {
                             break;
                         for(String leword: command.getFR())
                         {
-                            if (textMatchList.toArray()[i].toString().toLowerCase().compareTo(leword.toLowerCase()) == 0) {
-                                showToastMessage(command.getFunction().toString());
+                            for(String cmd : commande) {
+                                if(found)
+                                    break;
+                                if (cmd.toLowerCase().compareTo(leword.toLowerCase()) == 0) {
+                                    //showToastMessage(command.getFunction().toString());
+                                    matchingword = leword;
+                                    comFound = command;
+                                    found = true;
+                                    break;
+                                }else{
+                                    allwordsoncommand+=cmd.toLowerCase();
+                                }
+                            }
+                            //on regarde si la commande match si on a plusieurs mots
+                            if(allwordsoncommand.replaceAll("\\s+","").contains(leword.toLowerCase().replaceAll("\\s+",""))){
+                                matchingword = leword;
                                 comFound = command;
                                 found = true;
                                 break;
@@ -142,19 +169,144 @@ VoiceRecognitionActivity extends Activity {
 
                     }
                 }
+                if(found) {
+                    String number;
+                    String text;
+                    switch (comFound.getFunction()) {
+                        //Quand on veut lancer une application
+                        case ("Ouverture"):
+                            String app = ""; //Nom du package qui va etre lancé
+                            String appnamefromcommande=""; //Nom de l'application récuperer par la reconnaissance vocale
+                            String installapp="";   //Nom des applications installés
+                            for(int i =0; i< commande.length ;i++){
+                                if(i!=0)
+                                    appnamefromcommande+= commande[i];//On récupère le nom de l'application depuis le résultat de la commande vocale
+                            }
+                            appnamefromcommande= appnamefromcommande.toLowerCase().replaceAll("\\s+",""); //On formalise notre String
 
-                //GROS SWITCh CASE AVEC CHAQUE COMMANDE
-/*
-                if (textMatchList.get(0).contains("search")) {
+                            for(int i=0; i<installedApps.size();i++){
+                                installapp = (String) pm.getApplicationLabel(installedApps.get(i));//On formalise notre String
+                                installapp = installapp.toLowerCase().replaceAll("\\s+","");
+                                Log.d("Info 2.0",installapp);
+                                if( installapp.contains(appnamefromcommande)){  //Si on trouve une application correspondante on récupère le nom du package afin de lancer l'appli
+                                    app = installedApps.get(i).packageName;
+                                    //showToastMessage(app);
+                                    break;
+                                }
+                            }
+                            //On lance l'application
+                            if(app.length() > 0){
+                                Intent mIntent = getPackageManager().getLaunchIntentForPackage(app);
+                                if (mIntent != null) {
+                                    try {
+                                        startActivity(mIntent);
+                                        showToastMessage("Starting "+ installapp);
+                                    } catch (ActivityNotFoundException err) {
+                                        Toast t = Toast.makeText(getApplicationContext(), R.string.app_not_found, Toast.LENGTH_SHORT);
+                                        t.show();
+                                    }
+                                }
+                            }
+                            break;
+                        //Quand on veut téléphoner
+                        case ("Téléphoner"):
+                            number= "";
+                            for(int i =0; i< commande.length;i++){
+                                if(i!=0)
+                                    number+=commande[i];
+                            }
+                            number = number.replaceAll("[^0-9]", "");
+                            Log.d("Info 2.0",number);
+                            Intent callIntent = new Intent(Intent.ACTION_CALL);
+                            callIntent.setData(Uri.parse("tel:" + number));
+                            startActivity(callIntent);
+                            break;
+                        //Quand on veut envoyer un sms
+                        case ("SMS"):
+                            number="";
+                            text="";
+                            for(int i=0;i<commande.length;i++){
+                                if(i!=0){
+                                    number+=commande[i];
+                                    text+=commande[i]+" ";
+                                }
+                            }
+                            number= number.replaceAll(matchingword,"").replaceAll("[^0-9]", "");
+                            text = text.replaceAll("\\d", "");
+                            text= text.replaceAll(matchingword,"");
+                            text= text.trim();
+                            Log.d("Info 2.0", number);
+                            Log.d("Info 2.0",text);
+                            SmsManager sm = SmsManager.getDefault();
+                            sm.sendTextMessage(number, null, text, null, null);
+                            break;
+                        //Quand on veut lancer un magnétophone
+                        case "Magnetophone":
+                            break;
+                        //Quand on veut ouvrir la boite vocale
+                        case "BoiteVocale":
+                            TelephonyManager  tm=(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+                            String voicemailnumber = tm.getVoiceMailNumber();
+                            Intent voicemailIntent = new Intent(Intent.ACTION_CALL);
+                            voicemailIntent.setData(Uri.parse("tel:" + voicemailnumber));
+                            startActivity(voicemailIntent);
+                            break;
+                        case "PDF": //WIP
+                            File file = null;
+                            file = new File(Environment.getExternalStorageDirectory()+"/PDF.pdf");
+                            Toast.makeText(getApplicationContext(), file.toString() , Toast.LENGTH_LONG).show();
+                            if(file.exists()) {
+                                Intent target = new Intent(Intent.ACTION_VIEW);
+                                target.setDataAndType(Uri.fromFile(file), "application/pdf");
+                                target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 
-                    String searchQuery = textMatchList.get(0).replace("search",
-                            " ");
-                    Intent search = new Intent(Intent.ACTION_WEB_SEARCH);
-                    search.putExtra(SearchManager.QUERY, searchQuery);
-                    startActivity(search);    //Lancement de l'activité de recherche sur internet du terme
-                }*/
-//                Log.i("info",ResultCode.formInt(resultCode).toSring());
-                //Affichage des différentes erreurs
+                                Intent intent = Intent.createChooser(target, "Open File");
+                                try {
+                                    startActivity(intent);
+                                } catch (ActivityNotFoundException e) {
+                                    //Toast.makeText(getApplicationContext(),"Please install a pdf viewer",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                            else
+                                Toast.makeText(getApplicationContext(), "File path is incorrect." , Toast.LENGTH_LONG).show();
+                            break;
+                        case"Monter Volume":
+                            AudioManager audioup;
+                            audioup = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+                            //int currentVolume = audio.getStreamVolume(AudioManager.STREAM_RING);
+                            audioup.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE,0);
+                            audioup.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE,0);
+                            audioup.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE,0);
+                            audioup.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE,AudioManager.FLAG_SHOW_UI);
+                            break;
+                        case"Baisser Volume":
+                            AudioManager audiodown;
+                            audiodown = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+                            audiodown.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, 0);
+                            audiodown.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, 0);
+                            audiodown.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, 0);
+                            audiodown.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
+                            break;
+                        case"Silencieux":
+                            AudioManager audiomute;
+                            audiomute = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+                            audiomute.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+                            int currentStreamRingM = audiomute.getStreamVolume(AudioManager.STREAM_RING); // Permet d'activer le flag ( Barre du haut de volume) pour silencieux
+                            audiomute.setStreamVolume(AudioManager.STREAM_RING,currentStreamRingM,AudioManager.FLAG_VIBRATE+AudioManager.FLAG_SHOW_UI);
+                            break;
+                        case "Vibreur":
+                            AudioManager audiovibrate;
+                            audiovibrate = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+                            audiovibrate.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+                            int currentStreamRingV = audiovibrate.getStreamVolume(AudioManager.STREAM_RING); // Permet d'activer le flag ( Barre du haut de volume) pour vibreur
+                            audiovibrate.setStreamVolume(AudioManager.STREAM_RING,currentStreamRingV,AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE+AudioManager.FLAG_SHOW_UI);
+                            break;
+                        default:
+                            showToastMessage("Nothing implemented for this order");
+                    }
+                }else{
+                    showToastMessage("No command found for :" + textMatchList.toString());
+                }
             } else if (resultCode == RecognizerIntent.RESULT_AUDIO_ERROR) {
                 showToastMessage("Audio Error");
             } else if (resultCode == RecognizerIntent.RESULT_CLIENT_ERROR) {

@@ -324,8 +324,7 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_voice_recognition=0x7f030000;
-        public static final int settings=0x7f030001;
-        public static final int settings1=0x7f030002;
+        public static final int settings1=0x7f030001;
     }
     public static final class menu {
         public static final int activity_voice_recognition=0x7f0a0000;

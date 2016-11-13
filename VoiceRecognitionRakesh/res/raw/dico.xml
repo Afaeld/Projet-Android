@@ -22,7 +22,28 @@
                 <Es>abrir</Es>
             </Words>
         </Command>
-
+        <Command>
+            <Category>Interaction</Category>
+            <Function>SMS</Function>
+            <Words>
+                <Fr>envoyer</Fr>
+                <En>send</En>
+                <De>antworten</De>
+                <Es>enviar</Es>
+            </Words>
+            <Words>
+                <Fr>sms</Fr>
+                <En>sms</En>
+                <De>sms</De>
+                <Es>sms</Es>
+            </Words>
+            <Words>
+                <Fr>envoyer un message</Fr>
+                <En>send a message</En>
+                <De>schicke eine nachricht</De>
+                <Es>enviar un mensaje</Es>
+            </Words>
+        </Command>
         <Command>
             <Category>Interaction</Category>
             <Function>Décrocher</Function>
@@ -68,7 +89,27 @@
                 <Es>colgar</Es>
             </Words>
         </Command>
-
+        <Command>
+            <Category>Interaction</Category>
+            <Function>Téléphoner</Function>
+            <Words>
+                <Fr>Appeler</Fr>
+                <En>Call</En>
+                <De>anrufen</De>
+                <Es>llamá</Es>
+            </Words>
+            <Words>
+                <Fr>téléphoner</Fr>
+                <En>phone</En>
+                <Es>llamar </Es>
+            </Words>
+            <Words>
+                <Fr>Contacter</Fr>
+                <En>Contact</En>
+                <De>Kontakt</De>
+                <Es>contacto</Es>
+            </Words>
+        </Command>
         <Command>
             <Category>Interaction</Category>
             <Function>Raccrocher</Function>
@@ -161,11 +202,12 @@
             </Words>
         </Command>
 
+
         <Command>
             <Category>Application</Category>
             <Function>BoiteVocale</Function>
             <Words>
-                <Fr>boite vocale</Fr>
+                <Fr>boîte vocale</Fr>
                 <En>voice mail</En>
                 <De>sprachbox</De>
                 <Es>buzón de voz</Es>
@@ -189,7 +231,22 @@
                 <Es>correo de voz</Es>
             </Words>
         </Command>
-
+        <Command>
+            <Category>Application</Category>
+            <Function>PDF</Function>
+            <Words>
+                <Fr>ouvrir pdf</Fr>
+                <En>open pdf</En>
+                <De></De>
+                <Es></Es>
+            </Words>
+            <Words>
+                <Fr>pdf</Fr>
+                <En>pdf</En>
+                <De>pdf</De>
+                <Es>pdf</Es>
+            </Words>
+        </Command>
         <Command>
             <Category>Application</Category>
             <Function>Calendrier</Function>
@@ -278,6 +335,44 @@
                 <En>command edit</En>
                 <De>ruder verlegen</De>
                 <Es>edición comandos</Es>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Contrôle</Category>
+            <Function>Monter Volume</Function>
+            <Words>
+                <Fr>monter volume</Fr>
+                <En>up volume</En>
+                <Fr>monter</Fr>
+                <En>up</En>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Contrôle</Category>
+            <Function>Baisser Volume</Function>
+            <Words>
+                <Fr>baisser volume</Fr>
+                <En>down volume</En>
+                <Fr>baisser</Fr>
+                <En>down</En>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Contrôle</Category>
+            <Function>Silencieux</Function>
+            <Words>
+                <Fr>couper son</Fr>
+                <En>mute volume</En>
+                <Fr>silencieux</Fr>
+                <En>mute</En>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Contrôle</Category>
+            <Function>Vibreur</Function>
+            <Words>
+                <Fr>vibreur</Fr>
+                <En>vibrate</En>
             </Words>
         </Command>
     </Commands>
