@@ -4,7 +4,15 @@
         "source": "C:\\Users\\Vikes\\Documents\\GitHub\\Projet-Android\\ReconnaissanceVocale\\res\\layout\\help.xml"
     },
     {
+        "merged": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\ReconnaissanceVocale\\build\\intermediates\\res\\merged\\debug\\layout\\help.xml",
+        "source": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\ReconnaissanceVocale\\res\\layout\\help.xml"
+    },
+    {
         "merged": "C:\\Users\\Vikes\\Documents\\GitHub\\Projet-Android\\ReconnaissanceVocale\\build\\intermediates\\res\\merged\\debug\\layout\\activity_voice_recognition.xml",
         "source": "C:\\Users\\Vikes\\Documents\\GitHub\\Projet-Android\\ReconnaissanceVocale\\res\\layout\\activity_voice_recognition.xml"
+    },
+    {
+        "merged": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\ReconnaissanceVocale\\build\\intermediates\\res\\merged\\debug\\layout\\activity_voice_recognition.xml",
+        "source": "C:\\Users\\jerome\\workspace\\ProjetAndroidLevrai\\ReconnaissanceVocale\\res\\layout\\activity_voice_recognition.xml"
     }
 ]

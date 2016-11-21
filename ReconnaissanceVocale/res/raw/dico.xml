@@ -23,6 +23,26 @@
             </Words>
         </Command>
         <Command>
+        <Category>Start</Category>
+        <Function>Recherche</Function>
+        <Words>
+            <Fr>rechercher</Fr>
+            <En>research</En>
+            <De>suche</De>
+            <Es>búsqueda</Es>
+        </Words>
+        <Words>
+            <Fr>chercher</Fr>
+            <En>search</En>
+        </Words>
+        <Words>
+            <Fr>internet</Fr>
+            <En>web</En>
+            <De>netz</De>
+            <Es>web</Es>
+        </Words>
+        </Command>
+        <Command>
             <Category>Interaction</Category>
             <Function>SMS</Function>
             <Words>

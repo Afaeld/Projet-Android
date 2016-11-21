@@ -13,15 +13,18 @@ import java.util.List;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.ContactsContract;
 import android.speech.RecognizerIntent;
 import android.telephony.PhoneStateListener;
 import android.telephony.SmsManager;
@@ -168,7 +171,9 @@ VoiceRecognitionActivity extends Activity {
                     String number;
                     String text;
                     switch (comFound.getFunction()) {
-                        //Quand on veut lancer une application
+                        /**
+                         * Case Ouverture when you want to open an app from your phone
+                         */
                         case ("Ouverture"):
                             String app = ""; //Nom du package qui va etre lancé
                             String appnamefromcommande = ""; //Nom de l'application récuperer par la reconnaissance vocale
@@ -203,7 +208,22 @@ VoiceRecognitionActivity extends Activity {
                                 }
                             }
                             break;
-                        //Quand on veut téléphoner
+                        /**
+                         * Case Recherche when you want to start a Web Research
+                         */
+                        case ("Recherche"):
+                            String query="";
+                            for (int i =1; i<commande.length; i++){
+                                query +=commande[i]+" ";
+                            }
+                            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                            intent.putExtra(SearchManager.QUERY, query); // query contains search string
+                            startActivity(intent);
+                            break;
+
+                        /**
+                         * Case Téléphone when you want to make a call with a number/ contact name
+                         */
                         case ("Téléphoner"):
                             number = "";
                             for (int i = 0; i < commande.length; i++) {
@@ -212,21 +232,50 @@ VoiceRecognitionActivity extends Activity {
                             }
                             number = number.replaceAll("[^0-9]", "");
                             Log.d("Info 2.0", number);
+                            if(number.length() < 2){
+                                String name="";
+                                Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,null,null, null);
+                                while (phones.moveToNext())
+                                {
+                                    if(allwordsoncommand.replaceAll("\\s+", "").toLowerCase().contains(phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME)).replaceAll("\\s+", "").toLowerCase())){
+                                        number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                                        name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));;
+                                        Toast.makeText(getApplicationContext(),name, Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                                phones.close();
+                            }
                             Intent callIntent = new Intent(Intent.ACTION_CALL);
                             callIntent.setData(Uri.parse("tel:" + number));
                             startActivity(callIntent);
                             break;
-                        //Quand on veut envoyer un sms
+                        /**
+                         * When you want to send an sms with a number/contact name
+                         */
                         case ("SMS"):
                             number = "";
                             text = "";
                             for (int i = 0; i < commande.length; i++) {
                                 if (i != 0) {
                                     number += commande[i];
-                                    text += commande[i] + " ";
+                                    text += commande[i].toLowerCase() + " ";
                                 }
                             }
                             number = number.replaceAll(matchingword, "").replaceAll("[^0-9]", "");
+                            if(number.length() < 2){
+                                String name="";
+                                Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,null,null, null);
+                                while (phones.moveToNext())
+                                {
+                                    if(allwordsoncommand.replaceAll("\\s+", "").toLowerCase().contains(phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME)).replaceAll("\\s+", "").toLowerCase())){
+                                        number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                                        name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                                        Toast.makeText(getApplicationContext(),name, Toast.LENGTH_LONG).show();
+                                        text = text.toLowerCase().replaceAll(name,"");
+                                    }
+                                }
+                                phones.close();
+                            }
                             text = text.replaceAll("\\d", "");
                             text = text.replaceAll(matchingword, "");
                             text = text.trim();
@@ -235,10 +284,14 @@ VoiceRecognitionActivity extends Activity {
                             SmsManager sm = SmsManager.getDefault();
                             sm.sendTextMessage(number, null, text, null, null);
                             break;
-                        //Quand on veut lancer un magnétophone
+                        /**
+                         * Case Magnetophone when you want to start the audio recorder
+                         */
                         case "Magnetophone":
                             break;
-                        //Quand on veut ouvrir la boite vocale
+                        /*
+                         * Case BoiteVocale when you want to start the voice mail
+                         */
                         case "BoiteVocale":
                             TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
                             String voicemailnumber = tm.getVoiceMailNumber();
@@ -246,6 +299,9 @@ VoiceRecognitionActivity extends Activity {
                             voicemailIntent.setData(Uri.parse("tel:" + voicemailnumber));
                             startActivity(voicemailIntent);
                             break;
+                        /*
+                         * Case PDF when you want to open a PDF
+                         */
                         case "PDF": //WIP
                             File file = null;
                             file = new File(Environment.getExternalStorageDirectory() + "/PDF.pdf");
@@ -255,15 +311,18 @@ VoiceRecognitionActivity extends Activity {
                                 target.setDataAndType(Uri.fromFile(file), "application/pdf");
                                 target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 
-                                Intent intent = Intent.createChooser(target, "Open File");
+                                Intent intentpdf = Intent.createChooser(target, "Open File");
                                 try {
-                                    startActivity(intent);
+                                    startActivity(intentpdf);
                                 } catch (ActivityNotFoundException e) {
                                     //Toast.makeText(getApplicationContext(),"Please install a pdf viewer",Toast.LENGTH_LONG).show();
                                 }
                             } else
                                 Toast.makeText(getApplicationContext(), "File path is incorrect.", Toast.LENGTH_LONG).show();
                             break;
+                        /**
+                         * Case Monter Volume when you want to up the audio level of your phone
+                         */
                         case "Monter Volume":
                             AudioManager audioup;
                             audioup = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -273,6 +332,9 @@ VoiceRecognitionActivity extends Activity {
                             audioup.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, 0);
                             audioup.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
                             break;
+                        /**
+                         * Case Baisser Volume when you want to down the audio level of your phone
+                         */
                         case "Baisser Volume":
                             AudioManager audiodown;
                             audiodown = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -281,6 +343,9 @@ VoiceRecognitionActivity extends Activity {
                             audiodown.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, 0);
                             audiodown.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
                             break;
+                        /**
+                         * Case Silencieux when you want to set your phone state to mute
+                         */
                         case "Silencieux":
                             AudioManager audiomute;
                             audiomute = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -288,6 +353,9 @@ VoiceRecognitionActivity extends Activity {
                             int currentStreamRingM = audiomute.getStreamVolume(AudioManager.STREAM_RING); // Permet d'activer le flag ( Barre du haut de volume) pour silencieux
                             audiomute.setStreamVolume(AudioManager.STREAM_RING, currentStreamRingM, AudioManager.FLAG_VIBRATE + AudioManager.FLAG_SHOW_UI);
                             break;
+                        /**
+                         * Case Vibreur when you want to set your phone state to vibrate
+                         */
                         case "Vibreur":
                             AudioManager audiovibrate;
                             audiovibrate = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -295,6 +363,9 @@ VoiceRecognitionActivity extends Activity {
                             int currentStreamRingV = audiovibrate.getStreamVolume(AudioManager.STREAM_RING); // Permet d'activer le flag ( Barre du haut de volume) pour vibreur
                             audiovibrate.setStreamVolume(AudioManager.STREAM_RING, currentStreamRingV, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE + AudioManager.FLAG_SHOW_UI);
                             break;
+                        /**
+                         * When no implementation are found, show a toast
+                         */
                         default:
                             showToastMessage("Nothing implemented for this order");
                     }
@@ -316,8 +387,37 @@ VoiceRecognitionActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    /**
+     *
+     * @param message The message we want to show to the user
+     */
     public void showToastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     *  This function was used to debug and see what was inside the file stored on the phone
+     */
+    public void displayFileContent() {
+        try {
+            FileInputStream fileIn = openFileInput(XmlFileName);
+            InputStreamReader InputRead = new InputStreamReader(fileIn);
+
+            char[] inputBuffer = new char[READ_BLOCK_SIZE];
+            String s = "";
+            int charRead;
+
+            while ((charRead = InputRead.read(inputBuffer)) > 0) {
+                // char to string conversion
+                String readstring = String.copyValueOf(inputBuffer, 0, charRead);
+                s += readstring;
+            }
+            InputRead.close();
+            Log.v("XML", s);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /*
@@ -378,6 +478,10 @@ VoiceRecognitionActivity extends Activity {
             callReceived=false;
         }
     }*/
+
+    /**
+     * Init the XML File, if there is no XML file stores on the phone, create a new one based on dico.xml, else load the file
+     */
     public void initXML() {
         Log.v("XML", "Starting getXML ...");
         Boolean isAnXML = false;
@@ -459,31 +563,6 @@ VoiceRecognitionActivity extends Activity {
                 e.printStackTrace();
             }
             xpph.parse(fileIn);
-        }
-    }
-
-    /**
-     *
-     */
-    public void displayFileContent() {
-        try {
-            FileInputStream fileIn = openFileInput(XmlFileName);
-            InputStreamReader InputRead = new InputStreamReader(fileIn);
-
-            char[] inputBuffer = new char[READ_BLOCK_SIZE];
-            String s = "";
-            int charRead;
-
-            while ((charRead = InputRead.read(inputBuffer)) > 0) {
-                // char to string conversion
-                String readstring = String.copyValueOf(inputBuffer, 0, charRead);
-                s += readstring;
-            }
-            InputRead.close();
-            Log.v("XML", s);
-
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
