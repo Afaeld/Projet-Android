@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * Created by jerome on 16/09/2016.
- * Représente une commande, qui peut être sérializée en XML, avec des mots clés associés dans différentes langues.
+ * Represente une commande, qui peut être serializee en XML, avec des mots cles associes dans differentes langues.
  */
 public class Command {
 

@@ -3,21 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\jerome\workspace\ProjetAndroidLevrai\ReconnaissanceVocale\build\intermediates\exploded-aar\com.github.eluleci\flatui\3.0.0\jars\classes.jar"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\ReconnaissanceVocale\build\intermediates\exploded-aar\com.github.eluleci\flatui\3.0.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="d1089efa4a24767294278997764bea2fda31ccca">
-        <dex dex="C:\Users\jerome\workspace\ProjetAndroidLevrai\ReconnaissanceVocale\build\intermediates\pre-dexed\debug\com.github.eluleci-flatui-3.0.0_c59fe374aa2af5ee1fd09921d509ee4af99781bb.jar" />
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\ReconnaissanceVocale\build\intermediates\pre-dexed\debug\com.github.eluleci-flatui-3.0.0_060bcec4028cb03ce21fa57431c1eccd113ade68.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\jerome\workspace\ProjetAndroidLevrai\ReconnaissanceVocale\libs\android-support-v4.jar"
+        jar="C:\Users\Vikes\Documents\GitHub\Projet-Android\ReconnaissanceVocale\libs\android-support-v4.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="27c24d26e4c5d57976e6926367985548678e913c">
-        <dex dex="C:\Users\jerome\workspace\ProjetAndroidLevrai\ReconnaissanceVocale\build\intermediates\pre-dexed\debug\android-support-v4_3a237c35caf70e4651e793c107f3900e5d7dff09.jar" />
+        <dex dex="C:\Users\Vikes\Documents\GitHub\Projet-Android\ReconnaissanceVocale\build\intermediates\pre-dexed\debug\android-support-v4_92ad3427a1333b76ce24c5559234fc84ae3e93f2.jar" />
     </item>
 
 </items>

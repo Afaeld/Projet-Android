@@ -91,8 +91,8 @@
             <Category>Interaction</Category>
             <Function>Rejeter</Function>
             <Words>
-                <Fr>Rejeter</Fr>
-                <En>Dismiss</En>
+                <Fr>rejeter</Fr>
+                <En>dismiss</En>
                 <De>ablehnen</De>
                 <Es>rechazar</Es>
             </Words>
@@ -111,10 +111,10 @@
         </Command>
         <Command>
             <Category>Interaction</Category>
-            <Function>Téléphoner</Function>
+            <Function>Telephoner</Function>
             <Words>
-                <Fr>Appeler</Fr>
-                <En>Call</En>
+                <Fr>appeler</Fr>
+                <En>call</En>
                 <De>anrufen</De>
                 <Es>llamá</Es>
             </Words>
@@ -124,9 +124,9 @@
                 <Es>llamar </Es>
             </Words>
             <Words>
-                <Fr>Contacter</Fr>
-                <En>Contact</En>
-                <De>Kontakt</De>
+                <Fr>contacter</Fr>
+                <En>contact</En>
+                <De>kontakt</De>
                 <Es>contacto</Es>
             </Words>
         </Command>

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 /**
  * Class de gestion du fichier XML
- * Liste les commandes, les mots associés aux commandes, le context et le chemin du fichier.
+ * Liste les commandes, les mots associes aux commandes, le context et le chemin du fichier.
  *
  */
 public class XmlPullParserHandler {
@@ -161,7 +161,7 @@ public class XmlPullParserHandler {
 
     /**
      * Affichage complet du contenu du fichier xml
-     * @return String contenu du fichier xml formaté
+     * @return String contenu du fichier xml formate
      */
     public String XmlToString() {
 

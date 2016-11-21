@@ -13,31 +13,31 @@ import android.widget.Toast;
 
 
 /**
- * Différentes fonctionnalités associées à la réception des appels
+ * Differentes fonctionnalites associees a la reception des appels
  */
 public class CallReceiver extends BroadcastReceiver
 {
 
     @Override
-    public void onReceive(Context context, Intent intent) //Intercept les signaux du téléphone
+    public void onReceive(Context context, Intent intent) //Intercept les signaux du telephone
     {
         Log.d("Call", intent.getStringExtra(TelephonyManager.EXTRA_STATE).toString());
         if (intent.getStringExtra(TelephonyManager.EXTRA_STATE).equals(TelephonyManager.EXTRA_STATE_RINGING)) //Si le message est "Sonnerie"
         {
-            // Ce code sera exécuté lorsque le téléphone reçoit un appel entrant
+            // Ce code sera execute lorsque le telephone reçoit un appel entrant
 
             String incomingNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-            Toast.makeText(context, "Detected call : " + incomingNumber.toString(), Toast.LENGTH_SHORT).show(); // Récupération et affichage du numéro entrant
+            Toast.makeText(context, "Detected call : " + incomingNumber.toString(), Toast.LENGTH_SHORT).show(); // Recuperation et affichage du numero entrant
 
 
-            Intent intentCall = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH); //Création d'un "intent" ou action
+            Intent intentCall = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH); //Creation d'un "intent" ou action
             intentCall.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getClass().getPackage().getName());
             intentCall.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_WEB_SEARCH);
 
             intentCall.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intentCall.putExtra(RecognizerIntent.EXTRA_PROMPT, "Voice recognition Demo...");
-            context.startActivity(intentCall);                                  //Tentative de lancement de l'application de détection de la reconnaissance vocale
-            Toast.makeText(context,"Activité lancée ",Toast.LENGTH_LONG).show();
+            context.startActivity(intentCall);                                  //Tentative de lancement de l'application de detection de la reconnaissance vocale
+            Toast.makeText(context,"Activite lancee ",Toast.LENGTH_LONG).show();
         }
     }
 }

@@ -68,7 +68,7 @@ public class settings extends Activity {
     }
 
     /**
-     * Ajoute les différents eventListener du layout settingsV1
+     * Ajoute les differents eventListener du layout settingsV1
      */
     private void addEventListener() {
         Button btnSauvegarder = (Button) findViewById(R.id.btnSauvegarder);
@@ -237,7 +237,7 @@ public class settings extends Activity {
 
     /**
      * Initialise le fichier XML
-     * Cherche le fichier XML existant, si non trouvé, créé un fichier xml avec le fichier par défaut
+     * Cherche le fichier XML existant, si non trouve, cree un fichier xml avec le fichier par defaut
      */
     public void initXML() {
         Log.v("XML", "Starting getXML ...");

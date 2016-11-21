@@ -8,7 +8,7 @@ import com.cengalabs.flatui.FlatUI;
 
 /**
  * Created by Victor Bauer on 19/11/2016.
- * Écran d'affichage de l'aide de l'application, expliquant les différents buts des différents layouts
+ * ecran d'affichage de l'aide de l'application, expliquant les differents buts des differents layouts
  */
 
 public class Aide extends Activity {
@@ -22,7 +22,7 @@ public class Aide extends Activity {
         FlatUI.setDefaultTheme(FlatUI.DEEP);
         setContentView(R.layout.help);
         tvHelp= (TextView) findViewById(R.id.tvAide);
-        tvHelp.setText("Aide :   L'écran principale permet de lancer la reconnaissance vocale puis d'exécuter des commmandes. Le bouton settings permet de configurer les commandes, ajouter des mots clé aux commandes et enfin de supprimer des mots clé.");
+        tvHelp.setText("Aide :   L'ecran principale permet de lancer la reconnaissance vocale puis d'executer des commmandes. Le bouton settings permet de configurer les commandes, ajouter des mots cle aux commandes et enfin de supprimer des mots cle.");
 
     }
 

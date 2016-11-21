@@ -110,7 +110,7 @@ VoiceRecognitionActivity extends Activity {
 
     public void speak(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        //Identifie le package appelant pour spécifier l'application
+        //Identifie le package appelant pour specifier l'application
         //intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getClass()
         //         .getPackage().getName());
 
@@ -121,7 +121,7 @@ VoiceRecognitionActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE)  //Vérification de l'activitée appelée
+        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE)  //Verification de l'activitee appelee
 
             //If Voice recognition is successful then it returns RESULT_OK
             if (resultCode == RESULT_OK) {
@@ -175,12 +175,12 @@ VoiceRecognitionActivity extends Activity {
                          * Case Ouverture when you want to open an app from your phone
                          */
                         case ("Ouverture"):
-                            String app = ""; //Nom du package qui va etre lancé
-                            String appnamefromcommande = ""; //Nom de l'application récuperer par la reconnaissance vocale
-                            String installapp = "";   //Nom des applications installés
+                            String app = ""; //Nom du package qui va etre lance
+                            String appnamefromcommande = ""; //Nom de l'application recuperer par la reconnaissance vocale
+                            String installapp = "";   //Nom des applications installes
                             for (int i = 0; i < commande.length; i++) {
                                 if (i != 0)
-                                    appnamefromcommande += commande[i];//On récupère le nom de l'application depuis le résultat de la commande vocale
+                                    appnamefromcommande += commande[i];//On recupère le nom de l'application depuis le resultat de la commande vocale
                             }
                             appnamefromcommande = appnamefromcommande.toLowerCase().replaceAll("\\s+", ""); //On formalise notre String
 
@@ -188,7 +188,7 @@ VoiceRecognitionActivity extends Activity {
                                 installapp = (String) pm.getApplicationLabel(installedApps.get(i));//On formalise notre String
                                 installapp = installapp.toLowerCase().replaceAll("\\s+", "");
                                 Log.d("Info 2.0", installapp);
-                                if (installapp.contains(appnamefromcommande)) {  //Si on trouve une application correspondante on récupère le nom du package afin de lancer l'appli
+                                if (installapp.contains(appnamefromcommande)) {  //Si on trouve une application correspondante on recupère le nom du package afin de lancer l'appli
                                     app = installedApps.get(i).packageName;
                                     //showToastMessage(app);
                                     break;
@@ -222,9 +222,9 @@ VoiceRecognitionActivity extends Activity {
                             break;
 
                         /**
-                         * Case Téléphone when you want to make a call with a number/ contact name
+                         * Case Telephone when you want to make a call with a number/ contact name
                          */
-                        case ("Téléphoner"):
+                        case ("Telephoner"):
                             number = "";
                             for (int i = 0; i < commande.length; i++) {
                                 if (i != 0)
@@ -422,7 +422,7 @@ VoiceRecognitionActivity extends Activity {
 
     /*
     @Override
-    public void onReceive(Context mContext, Intent intent) //Intercept les signaux du téléphone
+    public void onReceive(Context mContext, Intent intent) //Intercept les signaux du telephone
     {
         saveContext=mContext;
         // Get the current Phone State
@@ -442,16 +442,16 @@ VoiceRecognitionActivity extends Activity {
         {
             ring =true;
             String incomingNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-            //Toast.makeText(mContext, "Detected call : " + incomingNumber.toString(), Toast.LENGTH_SHORT).show(); // Récupération et affichage du numéro entrant
+            //Toast.makeText(mContext, "Detected call : " + incomingNumber.toString(), Toast.LENGTH_SHORT).show(); // Recuperation et affichage du numero entrant
 
-            /*Intent intentCall = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH); //Création d'un "intent" ou action
+            /*Intent intentCall = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH); //Creation d'un "intent" ou action
             intentCall.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getClass().getPackage().getName());
             intentCall.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_WEB_SEARCH);
 
             intentCall.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intentCall.putExtra(RecognizerIntent.EXTRA_PROMPT, "Voice recognition Demo...");
-            mContext.startActivity(intentCall);                                  //Tentative de lancement de l'application de détection de la reconnaissance vocale
-            Toast.makeText(mContext,"Activité lancée ",Toast.LENGTH_LONG).show();
+            mContext.startActivity(intentCall);                                  //Tentative de lancement de l'application de detection de la reconnaissance vocale
+            Toast.makeText(mContext,"Activite lancee ",Toast.LENGTH_LONG).show();
         }
 
 
@@ -469,7 +469,7 @@ VoiceRecognitionActivity extends Activity {
             // If phone was ringing(ring=true) and not received(callReceived=false) , then it is a missed call
             if(ring==true&&callReceived==false)
             {
-                Toast.makeText(mContext, "Appel manqué : " + number.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Appel manque : " + number.toString(), Toast.LENGTH_SHORT).show();
                 Intent voiceintent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
                 intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
                 mContext.startActivity(voiceintent);

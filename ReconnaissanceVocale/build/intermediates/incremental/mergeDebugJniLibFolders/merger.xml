@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\jerome\workspace\ProjetAndroidLevrai\ReconnaissanceVocale\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\jerome\workspace\ProjetAndroidLevrai\ReconnaissanceVocale\build-types\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Vikes\Documents\GitHub\Projet-Android\ReconnaissanceVocale\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Vikes\Documents\GitHub\Projet-Android\ReconnaissanceVocale\build-types\debug\jniLibs"/></dataSet></merger>
