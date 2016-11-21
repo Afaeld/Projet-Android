@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <Spinner
+            android:id="@+id/commandSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:padding="5dip"
+            android:spinnerMode="dropdown"
+            android:textColor="#FF0000"
+            android:textSize="40pt"
+            android:theme="?android:attr/spinnerStyle" />
+
+        <ListView
+            android:id="@+id/listeWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+
+        <EditText
+            android:id="@+id/wordsEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Words" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSauvegarder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="Sauvegarder" />
+
+            <Button
+                android:text="Nouveau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNouveau"
+                android:layout_weight="1.04" />
+
+            <Button
+                android:id="@+id/btnSupprimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.89"
+                android:text="Supprimer" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

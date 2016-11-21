@@ -1,0 +1,284 @@
+<Dictionnaire>
+    <Commands>
+        <Command>
+            <Function>Ouverture</Function>
+            <Category>Start</Category>
+            <Words>
+                <Fr>lancer</Fr>
+                <En>launch</En>
+                <De>start</De>
+                <Es>iniciar</Es>
+            </Words>
+            <Words>
+                <Fr>lancement</Fr>
+                <En>launching</En>
+                <De>Einfahrung</De>
+                <Es>inicia</Es>
+            </Words>
+            <Words>
+                <Fr>ouvrir</Fr>
+                <En>open</En>
+                <De>offnen</De>
+                <Es>abrir</Es>
+            </Words>
+        </Command>
+
+        <Command>
+            <Category>Interaction</Category>
+            <Function>Decrocher</Function>
+            <Words>
+                <Fr>repondre</Fr>
+                <En>answer</En>
+                <De>antworten</De>
+                <Es>responder</Es>
+            </Words>
+            <Words>
+                <Fr>decrocher</Fr>
+                <En>pick up</En>
+                <De>abnehmen</De>
+                <Es>coger</Es>
+            </Words>
+            <Words>
+                <Fr>prendre appel</Fr>
+                <En>take a call</En>
+                <De>abnehmen</De>
+                <Es>tomar llamada</Es>
+            </Words>
+        </Command>
+
+        <Command>
+            <Category>Interaction</Category>
+            <Function>Rejeter</Function>
+            <Words>
+                <Fr>Rejeter</Fr>
+                <En>Dismiss</En>
+                <De>ablehnen</De>
+                <Es>rechazar</Es>
+            </Words>
+            <Words>
+                <Fr>annuler</Fr>
+                <En>cancel</En>
+                <De>abmelden</De>
+                <Es>cancelar</Es>
+            </Words>
+            <Words>
+                <Fr>raccrocher</Fr>
+                <En>hang up</En>
+                <De>auglegen</De>
+                <Es>colgar</Es>
+            </Words>
+        </Command>
+
+        <Command>
+            <Category>Interaction</Category>
+            <Function>Raccrocher</Function>
+            <Words>
+                <Fr>raccrocher appel</Fr>
+                <En>hang up the call</En>
+                <De>auflegen</De>
+                <Es>colgar llamada</Es>
+            </Words>
+            <Words>
+                <Fr>terminer appel</Fr>
+                <En>end the call</En>
+                <De>abschliessen</De>
+                <Es>finalizar llamada</Es>
+            </Words>
+            <Words>
+                <Fr>fin appel</Fr>
+                <En>end the call</En>
+                <De>abschliessen</De>
+                <Es>finalizar llamada</Es>
+            </Words>
+        </Command>
+
+        <Command>
+            <Category>Interaction</Category>
+            <Function>Document</Function>
+            <Words>
+                <Fr>page suivante</Fr>
+                <En>next page</En>
+                <De>nachstehend seite</De>
+                <Es>página siguiente</Es>
+            </Words>
+            <Words>
+                <Fr>page precedente</Fr>
+                <En>previous page</En>
+                <De>prÃ¤zedenz seite</De>
+                <Es>página anterior</Es>
+            </Words>
+            <Words>
+                <Fr>page debut</Fr>
+                <En>top of page</En>
+                <De>beginn das seite</De>
+                <Es></Es>
+            </Words>
+            <Words>
+                <Fr>page fin</Fr>
+                <En>bottom of page</En>
+                <De>ende das seite</De>
+                <Es>página inicial</Es>
+            </Words>
+            <Words>
+                <Fr>aller a la page numero</Fr>
+                <En>go to page</En>
+                <De>seite nummer gehen</De>
+                <Es>ir a la página</Es>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Application</Category>
+            <Function>Magnetophone</Function>
+            <Words>
+                <Fr>magnetophone</Fr>
+                <En>tape recorder</En>
+                <De>magnetofon</De>
+                <Es>grabadora</Es>
+            </Words>
+            <Words>
+                <Fr>enregistreur</Fr>
+                <En>recorder</En>
+                <De>magnetofon</De>
+                <Es>grabadora</Es>
+            </Words>
+            <Words>
+                <Fr>enregistrement</Fr>
+                <En>recording</En>
+                <De>registrirung</De>
+                <Es>grabación</Es>
+            </Words>
+            <Words>
+                <Fr>dictaphone</Fr>
+                <En>dictaphone</En>
+                <De>diktirgerat</De>
+                <Es>dictáfono</Es>
+            </Words>
+            <Words>
+                <Fr>enregistrement vocal</Fr>
+                <En>voice recording</En>
+                <De>registrirung</De>
+                <Es>grabación de voz</Es>
+            </Words>
+        </Command>
+
+        <Command>
+            <Category>Application</Category>
+            <Function>BoiteVocale</Function>
+            <Words>
+                <Fr>boite vocale</Fr>
+                <En>voice mail</En>
+                <De>sprachbox</De>
+                <Es>buzón de voz</Es>
+            </Words>
+            <Words>
+                <Fr>boite message vocaux</Fr>
+                <En>voice message box</En>
+                <De>Anrufbeantworter</De>
+                <Es>buzon de mensajes de voz</Es>
+            </Words>
+            <Words>
+                <Fr>messages vocaux</Fr>
+                <En>voice message</En>
+                <De>botschaft</De>
+                <Es>mensajes de voz</Es>
+            </Words>
+            <Words>
+                <Fr>messagerie vocale</Fr>
+                <En>voice messaging</En>
+                <De>sprachbox</De>
+                <Es>correo de voz</Es>
+            </Words>
+        </Command>
+
+        <Command>
+            <Category>Application</Category>
+            <Function>Calendrier</Function>
+            <Words>
+                <Fr>calendrier</Fr>
+                <En>calendar</En>
+                <De>kalendarium</De>
+                <Es>calendario</Es>
+            </Words>
+            <Words>
+                <Fr>calendrier</Fr>
+                <En>schedule</En>
+                <De>Kalender</De>
+                <Es>calendario</Es>
+            </Words>
+            <Words>
+                <Fr>prochains evenements</Fr>
+                <En>next event</En>
+                <De>nachste ereignis</De>
+                <Es></Es>
+            </Words>
+            <Words>
+                <Fr>evenements a venir</Fr>
+                <En>incoming event</En>
+                <De>folgend ereignis</De>
+                <Es>próximo evento</Es>
+            </Words>
+            <Words>
+                <Fr>calendrier des evenements</Fr>
+                <En>calendar of events</En>
+                <De>ereignis kalendarium</De>
+                <Es>calendario de eventos</Es>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Application</Category>
+            <Function>Notes</Function>
+            <Words>
+                <Fr>bloc notes</Fr>
+                <En>notebook</En>
+                <De>Feld für Anmerkungen</De>
+                <Es>bloc de notas</Es>
+            </Words>
+            <Words>
+                <Fr>memo</Fr>
+                <En>memo</En>
+                <De>merkzettel</De>
+                <Es>Memorando</Es>
+            </Words>
+            <Words>
+                <Fr>prise de notes</Fr>
+                <En>note taking</En>
+                <De>aufschreiben</De>
+                <Es>toma de notas</Es>
+            </Words>
+            <Words>
+                <Fr>ecrire une note</Fr>
+                <En>write a note</En>
+                <De>notieren</De>
+                <Es>escribe una nota</Es>
+            </Words>
+            <Words>
+                <Fr>prendre une note</Fr>
+                <En>take a note</En>
+                <De>vormerken</De>
+                <Es>toma una nota</Es>
+            </Words>
+        </Command>
+        <Command>
+            <Category>Application</Category>
+            <Function>Editeur</Function>
+            <Words>
+                <Fr>editeur commandes</Fr>
+                <En>command editor</En>
+                <De>ruder editor</De>
+                <Es>editor de comandos</Es>
+            </Words>
+            <Words>
+                <Fr>gestionnaire commandes</Fr>
+                <En>command manager</En>
+                <De>ruder verwalter</De>
+                <Es>administrador de comandos</Es>
+            </Words>
+            <Words>
+                <Fr>edition commandes</Fr>
+                <En>command edit</En>
+                <De>ruder verlegen</De>
+                <Es>edición comandos</Es>
+            </Words>
+        </Command>
+    </Commands>
+</Dictionnaire>
