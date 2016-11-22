@@ -52,7 +52,7 @@ VoiceRecognitionActivity extends Activity {
     static final int READ_BLOCK_SIZE = 100;
     static boolean newDico = false;
     static final String XmlFileName = "dico.xml";
-    static final String Language = Locale.getDefault().getDisplayLanguage();
+    static final String Language = Locale.getDefault().getDisplayLanguage().toLowerCase();
 
     /**
      *
@@ -139,29 +139,111 @@ VoiceRecognitionActivity extends Activity {
                     commande = textMatchList.toArray()[i].toString().split(" ");
                     if (found)
                         break;
+
                     for (Command command : xpph.cmds) {
                         if (found)
                             break;
-                        for (String leword : command.getFR()) {
-                            for (String cmd : commande) {
-                                if (found)
-                                    break;
-                                if (cmd.toLowerCase().compareTo(leword.toLowerCase()) == 0) {
-                                    //showToastMessage(command.getFunction().toString());
+                        if(VoiceRecognitionActivity.Language.equals("français"))
+                        {
+                            for (String leword : command.getFR()) {
+                                allwordsoncommand=arrayTostring(commande).toLowerCase();
+
+                                for (String cmd : commande) {
+                                    if (found)
+                                        break;
+                                    if (cmd.toLowerCase().compareTo(leword.toLowerCase()) == 0) {
+                                        //showToastMessage(command.getFunction().toString());
+                                        matchingword = leword;
+                                        comFound = command;
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                //on regarde si la commande match si on a plusieurs mots
+                                if (allwordsoncommand.replaceAll("\\s+", "").contains(leword.toLowerCase().replaceAll("\\s+", ""))) {
                                     matchingword = leword;
                                     comFound = command;
                                     found = true;
                                     break;
-                                } else {
-                                    allwordsoncommand += cmd.toLowerCase();
                                 }
                             }
-                            //on regarde si la commande match si on a plusieurs mots
-                            if (allwordsoncommand.replaceAll("\\s+", "").contains(leword.toLowerCase().replaceAll("\\s+", ""))) {
-                                matchingword = leword;
-                                comFound = command;
-                                found = true;
-                                break;
+                        }
+                        else if(VoiceRecognitionActivity.Language.equals("english"))
+                        {
+                            for (String leword : command.getEN()) {
+                                allwordsoncommand=arrayTostring(commande).toLowerCase();
+
+
+
+                                for (String cmd : commande) {
+                                    if (found)
+                                        break;
+                                    if (cmd.toLowerCase().compareTo(leword.toLowerCase()) == 0) {
+                                        //showToastMessage(command.getFunction().toString());
+                                        matchingword = leword;
+                                        comFound = command;
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                //on regarde si la commande match si on a plusieurs mots
+                                if (allwordsoncommand.replaceAll("\\s+", "").contains(leword.toLowerCase().replaceAll("\\s+", ""))) {
+                                    matchingword = leword;
+                                    comFound = command;
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+                        else if(VoiceRecognitionActivity.Language.equals("deutsche"))
+                        {
+                            for (String leword : command.getDE()) {
+                                allwordsoncommand=arrayTostring(commande).toLowerCase();
+
+
+                                for (String cmd : commande) {
+                                    if (found)
+                                        break;
+                                    if (cmd.toLowerCase().compareTo(leword.toLowerCase()) == 0) {
+                                        //showToastMessage(command.getFunction().toString());
+                                        matchingword = leword;
+                                        comFound = command;
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                //on regarde si la commande match si on a plusieurs mots
+                                if (allwordsoncommand.replaceAll("\\s+", "").contains(leword.toLowerCase().replaceAll("\\s+", ""))) {
+                                    matchingword = leword;
+                                    comFound = command;
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            for (String leword : command.getES()) {
+                                allwordsoncommand=arrayTostring(commande).toLowerCase();
+
+                                for (String cmd : commande) {
+                                    if (found)
+                                        break;
+                                    if (cmd.toLowerCase().compareTo(leword.toLowerCase()) == 0) {
+                                        //showToastMessage(command.getFunction().toString());
+                                        matchingword = leword;
+                                        comFound = command;
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                //on regarde si la commande match si on a plusieurs mots
+                                if (allwordsoncommand.replaceAll("\\s+", "").contains(leword.toLowerCase().replaceAll("\\s+", ""))) {
+                                    matchingword = leword;
+                                    comFound = command;
+                                    found = true;
+                                    break;
+                                }
                             }
                         }
 
@@ -241,13 +323,16 @@ VoiceRecognitionActivity extends Activity {
                                         number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                                         name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));;
                                         Toast.makeText(getApplicationContext(),name, Toast.LENGTH_LONG).show();
+                                        break;
                                     }
                                 }
                                 phones.close();
                             }
-                            Intent callIntent = new Intent(Intent.ACTION_CALL);
-                            callIntent.setData(Uri.parse("tel:" + number));
-                            startActivity(callIntent);
+                            if(number.length()>=2) {
+                                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                                callIntent.setData(Uri.parse("tel:" + number));
+                                startActivity(callIntent);
+                            }
                             break;
                         /**
                          * When you want to send an sms with a number/contact name
@@ -271,7 +356,7 @@ VoiceRecognitionActivity extends Activity {
                                         number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                                         name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
                                         Toast.makeText(getApplicationContext(),name, Toast.LENGTH_LONG).show();
-                                        text = text.toLowerCase().replaceAll(name,"");
+                                        text = text.toLowerCase().replaceAll(name.toLowerCase(),"");
                                     }
                                 }
                                 phones.close();
@@ -281,8 +366,10 @@ VoiceRecognitionActivity extends Activity {
                             text = text.trim();
                             Log.d("Info 2.0", number);
                             Log.d("Info 2.0", text);
-                            SmsManager sm = SmsManager.getDefault();
-                            sm.sendTextMessage(number, null, text, null, null);
+                            if(number.length()>=2) {
+                                SmsManager sm = SmsManager.getDefault();
+                                sm.sendTextMessage(number, null, text, null, null);
+                            }
                             break;
                         /**
                          * Case Magnetophone when you want to start the audio recorder
@@ -565,4 +652,13 @@ VoiceRecognitionActivity extends Activity {
             xpph.parse(fileIn);
         }
     }
+    public String arrayTostring(String[] array)
+    {
+        StringBuilder builder = new StringBuilder();
+        for(String s : array) {
+            builder.append(s);
+        }
+        return builder.toString();
+    }
+
 }

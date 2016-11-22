@@ -92,7 +92,7 @@ public class settings extends Activity {
                                     break;
                                 }
                             }
-                        } else if (VoiceRecognitionActivity.Language.equals("german")) {
+                        } else if (VoiceRecognitionActivity.Language.equals("deutsche")) {
                             for (int i = 0; i < commande.getFR().size(); i++) {
                                 if (commande.getDE().get(i).toString().toLowerCase().equals(selectedWord)) {
                                     commande.getDE().set(i, editWords.getText().toString().toLowerCase());
