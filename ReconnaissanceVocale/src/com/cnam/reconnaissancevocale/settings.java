@@ -35,7 +35,7 @@ public class settings extends Activity {
 
     private Spinner allCommands;
     private ListView listWord;
-    private XmlPullParserHandler xpph;
+    private XmlPullParserHandler xpph=VoiceRecognitionActivity.xpph;
     private ArrayAdapter<String> arrayAdapter;
     private EditText editWords;
     private Context thisContext;
@@ -59,7 +59,6 @@ public class settings extends Activity {
         editWords = (EditText) findViewById(R.id.wordsEdit);
         editWords.setText("");
         listWord = (ListView) findViewById(R.id.listeWord);
-        getXpph();
         fillData();
         addEventListener();
         String[] widgetModes = {"Mode 1", "Mode2"};
@@ -110,6 +109,7 @@ public class settings extends Activity {
                 }
                 xpph.save();
                 fillData();
+
             }
         });
 
@@ -331,6 +331,8 @@ public class settings extends Activity {
      * Remplis le spinnerArray allCommands avec les commandes du fichier XML
      */
     public void fillData() {
+        allCommands.setEnabled(false);
+        allCommands.setClickable(false);
         List<String> spinnerArray = new ArrayList<String>();
 
         for (Command commande : xpph.cmds) {
@@ -343,5 +345,8 @@ public class settings extends Activity {
         allCommands.setAdapter(new ArrayAdapter<String>(
                 thisContext, android.R.layout.simple_spinner_item, new ArrayList<String>()));
         allCommands.setAdapter(adapter);
+
+        allCommands.setEnabled(true);
+        allCommands.setClickable(true);
     }
 }

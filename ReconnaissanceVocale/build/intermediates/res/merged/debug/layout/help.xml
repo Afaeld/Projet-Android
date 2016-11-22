@@ -6,9 +6,22 @@
     android:background="@color/white"
     android:weightSum="1">
 
-    <TextView
-        android:text="TextView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="488dp"
-        android:id="@+id/tvAide" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvAide"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

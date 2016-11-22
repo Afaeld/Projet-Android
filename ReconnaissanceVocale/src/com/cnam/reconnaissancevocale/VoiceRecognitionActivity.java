@@ -47,7 +47,7 @@ VoiceRecognitionActivity extends Activity {
     private PhoneStateListener listener = new PhoneStateListener();
     private List pkgAppsList;
     private List<ApplicationInfo> installedApps;
-    private XmlPullParserHandler xpph;
+    public static XmlPullParserHandler xpph;
     private PackageManager pm;
     static final int READ_BLOCK_SIZE = 100;
     static boolean newDico = false;
